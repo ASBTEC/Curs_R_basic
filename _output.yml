@@ -1,0 +1,31 @@
+#bookdown::html_document2: default
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">Cursos ASBTEC | Inicia't a R</a></li>
+      after: |
+        <li><ul>Edicions:
+          <li><a href="https://www.asbtec.org" target="blank">1a edició [2021]</a></li>
+        </ul></li><br>
+        <li><ul>Autors:
+          <li><a href="https://amitjavilaventura.github.io" target="blank">Adrià Mitjavila</a></li>
+        </ul></li><br>
+        <li><a href="https://bookdown.org" target="blank">Publicat amb <code>bookdown</code></a></li>
+    toolbar:
+      position: fixed
+    edit : null
+    search: yes
+    fontsettings:
+      theme: white
+      family: sans
+      size: 2
+    info: yes
+#bookdown::pdf_book:
+#  includes:
+#    in_header: preamble.tex
+#  latex_engine: xelatex
+#  citation_package: natbib
+#  keep_tex: yes
+#bookdown::epub_book: default

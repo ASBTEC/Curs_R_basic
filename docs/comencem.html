@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítol 2 Comencem | Cursos ASBTEC | Inicia’t a R</title>
+  <meta name="description" content="Capítol 2 Comencem | Cursos ASBTEC | Inicia’t a R" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítol 2 Comencem | Cursos ASBTEC | Inicia’t a R" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="assets/portada.png" />
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítol 2 Comencem | Cursos ASBTEC | Inicia’t a R" />
+  
+  
+  <meta name="twitter:image" content="assets/portada.png" />
+
+<meta name="author" content="Associació de Biotecnòlegs de Catalunya" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introducció.html"/>
+<link rel="next" href="solucions.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Cursos ASBTEC | Inicia't a R</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="" data-path="edició.html"><a href="edició.html"><i class="fa fa-check"></i>Edició</a></li>
+<li class="chapter" data-level="" data-path="llicència.html"><a href="llicència.html"><i class="fa fa-check"></i>Llicència</a></li>
+<li class="chapter" data-level="" data-path="pròleg.html"><a href="pròleg.html"><i class="fa fa-check"></i>Pròleg</a>
+<ul>
+<li class="chapter" data-level="" data-path="pròleg.html"><a href="pròleg.html#objectius-del-curs"><i class="fa fa-check"></i>Objectius del curs</a></li>
+<li class="chapter" data-level="" data-path="pròleg.html"><a href="pròleg.html#continguts-del-curs"><i class="fa fa-check"></i>Continguts del curs</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introducció.html"><a href="introducció.html"><i class="fa fa-check"></i><b>1</b> Introducció</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introducció.html"><a href="introducció.html#què-és-r"><i class="fa fa-check"></i><b>1.1</b> Què és R?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="introducció.html"><a href="introducció.html#per-què-r"><i class="fa fa-check"></i><b>1.1.1</b> Per què R?</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introducció.html"><a href="introducció.html#installa-r"><i class="fa fa-check"></i><b>1.1.2</b> Instal·la R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="introducció.html"><a href="introducció.html#què-és-rstudio"><i class="fa fa-check"></i><b>1.2</b> Què és RStudio?</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introducció.html"><a href="introducció.html#installa-rstudio"><i class="fa fa-check"></i><b>1.2.1</b> Instal·la RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introducció.html"><a href="introducció.html#fes-ho-tu"><i class="fa fa-check"></i><b>1.3</b> Fes-ho tu!</a></li>
+<li class="chapter" data-level="1.4" data-path="introducció.html"><a href="introducció.html#recursos-per-a-laprenentatge"><i class="fa fa-check"></i><b>1.4</b> Recursos per a l’aprenentatge</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="comencem.html"><a href="comencem.html"><i class="fa fa-check"></i><b>2</b> Comencem</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="comencem.html"><a href="comencem.html#glossari-bàsic"><i class="fa fa-check"></i><b>2.1</b> Glossari bàsic</a></li>
+<li class="chapter" data-level="2.2" data-path="comencem.html"><a href="comencem.html#comencem-a-fer-servir-r-i-rstudio"><i class="fa fa-check"></i><b>2.2</b> Comencem a fer servir R i RStudio</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="comencem.html"><a href="comencem.html#configurem-rstudio"><i class="fa fa-check"></i><b>2.2.1</b> Configurem RStudio</a></li>
+<li class="chapter" data-level="2.2.2" data-path="comencem.html"><a href="comencem.html#com-cridar-funcions"><i class="fa fa-check"></i><b>2.2.2</b> Com cridar funcions</a></li>
+<li class="chapter" data-level="2.2.3" data-path="comencem.html"><a href="comencem.html#paquets-externs"><i class="fa fa-check"></i><b>2.2.3</b> Paquets externs</a></li>
+<li class="chapter" data-level="2.2.4" data-path="comencem.html"><a href="comencem.html#us-bàsic-dr"><i class="fa fa-check"></i><b>2.2.4</b> Us bàsic d’R</a></li>
+<li class="chapter" data-level="2.2.5" data-path="comencem.html"><a href="comencem.html#establir-un-directori-de-treball"><i class="fa fa-check"></i><b>2.2.5</b> Establir un directori de treball</a></li>
+<li class="chapter" data-level="2.2.6" data-path="comencem.html"><a href="comencem.html#utilitzar-scripts-dr"><i class="fa fa-check"></i><b>2.2.6</b> Utilitzar <em>scripts</em> d’R</a></li>
+<li class="chapter" data-level="2.2.7" data-path="comencem.html"><a href="comencem.html#utilitzar-documents-rmarkdown"><i class="fa fa-check"></i><b>2.2.7</b> Utilitzar documents Rmarkdown</a></li>
+<li class="chapter" data-level="2.2.8" data-path="comencem.html"><a href="comencem.html#crear-un-projecte-dr"><i class="fa fa-check"></i><b>2.2.8</b> Crear un projecte d’R</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="comencem.html"><a href="comencem.html#exercicis."><i class="fa fa-check"></i><b>2.3</b> Exercicis.</a>
+<ul>
+<li class="chapter" data-level="" data-path="comencem.html"><a href="comencem.html#exercici-1"><i class="fa fa-check"></i>Exercici 1</a></li>
+<li class="chapter" data-level="" data-path="comencem.html"><a href="comencem.html#exercici-2"><i class="fa fa-check"></i>Exercici 2</a></li>
+<li class="chapter" data-level="" data-path="comencem.html"><a href="comencem.html#exercici-3"><i class="fa fa-check"></i>Exercici 3</a></li>
+<li class="chapter" data-level="" data-path="comencem.html"><a href="comencem.html#exercici-4"><i class="fa fa-check"></i>Exercici 4</a></li>
+<li class="chapter" data-level="" data-path="comencem.html"><a href="comencem.html#exercici-5"><i class="fa fa-check"></i>Exercici 5</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="comencem.html"><a href="comencem.html#recursos-per-a-laprenentatge-1"><i class="fa fa-check"></i><b>2.4</b> Recursos per a l’aprenentatge</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="solucions.html"><a href="solucions.html"><i class="fa fa-check"></i>Solucions</a>
+<ul>
+<li class="chapter" data-level="" data-path="solucions.html"><a href="solucions.html#capítol-1.-introduccio"><i class="fa fa-check"></i>Capítol 1. Introduccio</a></li>
+<li class="chapter" data-level="" data-path="solucions.html"><a href="solucions.html#capítol-2.-comencem"><i class="fa fa-check"></i>Capítol 2. Comencem</a>
+<ul>
+<li class="chapter" data-level="" data-path="solucions.html"><a href="solucions.html#exercici-1."><i class="fa fa-check"></i>Exercici 1.</a></li>
+<li class="chapter" data-level="" data-path="solucions.html"><a href="solucions.html#exercici-2."><i class="fa fa-check"></i>Exercici 2.</a></li>
+<li class="chapter" data-level="" data-path="solucions.html"><a href="solucions.html#exercici-3."><i class="fa fa-check"></i>Exercici 3.</a></li>
+<li class="chapter" data-level="" data-path="solucions.html"><a href="solucions.html#exercici-4."><i class="fa fa-check"></i>Exercici 4.</a></li>
+<li class="chapter" data-level="" data-path="solucions.html"><a href="solucions.html#exercici-5."><i class="fa fa-check"></i>Exercici 5.</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><ul>Edicions:
+  <li><a href="https://www.asbtec.org" target="blank">1a edició [2021]</a></li>
+</ul></li><br>
+<li><ul>Autors:
+  <li><a href="https://amitjavilaventura.github.io" target="blank">Adrià Mitjavila</a></li>
+</ul></li><br>
+<li><a href="https://bookdown.org" target="blank">Publicat amb <code>bookdown</code></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Cursos ASBTEC | Inicia’t a R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="comencem" class="section level1" number="2">
+<h1><span class="header-section-number">Capítol 2</span> Comencem</h1>
+<p>En aquesta unitat aprendrem:</p>
+<ul>
+<li>Conceptes bàsics d’R.</li>
+<li>Com configurar RStudio.</li>
+<li>Us bàsic d’R i Rmarkdown.</li>
+</ul>
+<div id="glossari-bàsic" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Glossari bàsic</h2>
+<p>Abans de començar a utilitzar R i RStudio, s’han de conèixer alguns conceptes bàsics que us anirem mostrant al llarg del curs. Us deixem un petit glossari d’aquest conceptes.</p>
+<ul>
+<li><strong>Directori</strong>: en poques paraules, sinònim de carpeta.</li>
+<li><strong>Ruta/camí (<em>path</em>)</strong>: ruta a un fitxer o directori concret, que inclou tots els directoris anteriors i separats per una barra (<strong>/</strong>).
+<ul>
+<li><strong><em>Path</em> absolut</strong>: ruta a un fitxer o directori que comença des del disc del sistema. Sol començar amb una barra <strong>/</strong> (ex. <code>/Users/ieo5089/Desktop/</code>).</li>
+<li><strong><em>Path</em> relatiu</strong>: ruta a un fitxer o directori que comença des d’una ubicació concreta on el sistema està ubicat actualment, anomenada directori de treball. No sol començar amb una barra (ex. des de <code>Desktop</code>, <code>Adria/Other/ASBTEC/cursos_R/imatges/logo_asbtec.png</code>).</li>
+<li>Dins el <em>path</em>, podem indicar el directori actual amb un punt (<strong>.</strong>) o tirar enrere amb dos punts (<strong>..</strong>), sempre amb la separació la barra entre directoris (ex. des de <code>Desktop</code>, <code>./Adria/Other/ASBTEC/../../Other/ASBTEC/cursos_R/imatges/logo_asbtec.png</code>).</li>
+<li>És recomanable no utilitzar espais en blanc o comes en el nom dels directoris o fitxers.</li>
+</ul></li>
+<li><strong>Directori de treball (<em>working directory</em>)</strong>: directori on estem ubicats actualment i on R cercarà les dades. Per defecte, R agafa la carpeta de l’usuari (ex. <code>home</code>) com a tal. La carpeta <code>home</code> es pot especificar mitjançant <strong><code>~</code></strong> en un <em>path</em>.</li>
+<li><strong>Objecte</strong>: qualsevol cosa emmagatzemada dins la memòria d’R, ja siguin variables, funcions, etc.</li>
+<li><strong>Variable</strong>: dades que tenim emmagatzemades dins la memòria d’R, ja siguin un número, una paraula, un vector, una matriu de dades, etc.</li>
+<li><strong>Funció</strong>: fragment de codi que tenim emmagatzemat dins un objecte dins la memòria d’R i que podem cridar repetidament, per exemple, la funció <code>sum()</code> que serveix per fer sumes dels nombres a l’interior del parèntesi. Algunes funcions tenen diversos paràmetres que podem canviar.</li>
+<li><strong>Paquets o llibreries</strong>: conjunt de funcions, mètodes i sets de dades. Poden estar integrats dins R o poden haver estat desenvolupats per tercers. En el segon cas, s’hauran d’instal·lar i carregar dins de la sessió actual.</li>
+<li><strong>Entorn (o ambient) de treball (<em>environment</em>)</strong>: entorn dins la memòria del sistema on es guarden totes les variables, paquets/llibreries, etc. Si volem utilitzar una funció, llibreria o variable, aquestes les hem de tenir definides dins l’entorn de treball. En cas contrari, R no les detectarà.</li>
+<li><em>Evaluar codi</em>: significa executar un fragment de codi, ja sigui una ordre o diverses. En cas de <em>scripts</em> sencers, se sol parlar més d’executar o, a vegades, córrer. També podem dir que cridem una funció.</li>
+<li><strong>Comentari</strong>: text utilitzat per explicar el codi però que no és evaluat. A R (també Python i altres), aquest text està precedit per un coixinet (<strong><em>#</em></strong>).</li>
+</ul>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="comencem-a-fer-servir-r-i-rstudio" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Comencem a fer servir R i RStudio</h2>
+<div id="configurem-rstudio" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Configurem RStudio</h3>
+<p>Ara que ja tenim R i RStudio instal·lats, només queda configurar-los al nostre gust i aprendre a utilitzar-los.</p>
+<p>Cal mencionar que, a partir d’aquest punt, absolutament tot el que es dugui a terme en aquest curs es farà dins d’RStudio, tret dels casos que s’indiquin, així que el que hem de fer primer és obrir RStudio.</p>
+<p>Per a configurar RStudio:</p>
+<ul>
+<li><strong>Apariència</strong>: una de les coses que podem fer, és canviar els colors de RStudio. Com heu vist a la figura 2, els colors són foscos, mentre que, probablement, vosaltres els tindreu clars per defecte. Podeu canviar això:
+<ul>
+<li>A la barra superior, hem d’anar a <em>Tools</em>&gt;<em>Global options</em>&gt;<em>Appearance</em></li>
+</ul></li>
+<li><strong>Distribució dels panells</strong>: la distribució dels panells es pot canviar a la barra superior: <em>Tools</em>&gt;<em>Global options</em>&gt;<em>Pane Layout</em></li>
+</ul>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="com-cridar-funcions" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Com cridar funcions</h3>
+<p>Cridar una funció significa executar el codi que hi ha dins aquella funció i la podem cridar tantes vegades com volguem.</p>
+<p>Cal recordar que les funcions, així com la resta de codi, s’han d’evaluar dins la consola d’R, un <em>script</em> o un bloc de codi dins d’un document <em>RMarkdown</em> (dels quals en parlarem més endevant.)</p>
+<p>Per a cridar una funció, simplement hem d’escriure el seu nom seguit de parèntesis (ex. <code>sum()</code>).</p>
+<p>A la majoria de les funcions, a dins el parèntesis hi ha el que se’n diuen <em>paràmetres</em> o <em>arguments</em>, que són valors o objectes d’R que se li donen a la funció com a <em>input</em>. En el cas de la funció <code>sum()</code> els arguments són els números que li donem perquè els sumi.</p>
+<p>La funció <code>sum()</code> entre d’altres, son del paquet <code>base</code> d’R, que ja està integrat dins el mateix llenguatge, així com alguns altres paquets (ex. <code>stats</code>).</p>
+</div>
+<div id="paquets-externs" class="section level3" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Paquets externs</h3>
+<p>Per a cridar funcions de paquets externs, primer haurem de tenir instal·lat (més endevant s’explica com instal·lar paquets de diversos repositoris) el paquet corresponent. Després hem de <strong>carregar</strong> aquest paquet mitjançant la funció <code>library()</code> o <code>require()</code>. Aquest procés de carregar un paquet només és necessari fer-lo una vegada per sessió.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="comencem.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(paquet) <span class="co"># carreguem el paquet que ens interessa</span></span>
+<span id="cb1-2"><a href="comencem.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">funcio</span>()        <span class="co"># cridem la funció que es troba dins un dels paquets que hem carregat anteriorment</span></span></code></pre></div>
+<p>També podem fer cridar la funció indicant el nom del paquet al mateix temps mitjançant la següent estructura <code>paquet::funcio()</code>, tant si hem carregat el paquet amb anterioritat com si no. Aquest mètode té dos punts a favor molt clars:</p>
+<ul>
+<li><p>Evita errors en cas que tinguem dos paquets diferents que tenen dues funcions diferents però que es diuen igual, ja que una funció emmascara l’altra.</p>
+<ul>
+<li>Per exemple, tenim un paquet anomenat <code>paquet1</code>, el qual té una funció anomenada <code>funcio()</code>, mentre que el paquet <code>paquet2</code> té una funció diferent amb el mateix nom i tenim els dos paquets carregats. Posem per cas que la funció del paquet <code>paquet1</code> té prioritat sobre la del paquet <code>paquet2</code>, però nosaltres volem utilitzar la del paquet <code>paquet2</code>, què hem de fer? Doncs simplement hem d’indicar de quin paquet volem fer servir la funció escribint el nom del paquet abans de la funció: <code>paquet2::funcio()</code></li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="comencem.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(paquet1)  <span class="co"># carreguem el paquet1</span></span>
+<span id="cb2-2"><a href="comencem.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(paquet2)  <span class="co"># carreguem el paquet2</span></span>
+<span id="cb2-3"><a href="comencem.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">funcio</span>()          <span class="co"># cridem la funcio() del paquet1 perquè té prioritat</span></span>
+<span id="cb2-4"><a href="comencem.html#cb2-4" aria-hidden="true" tabindex="-1"></a>paquet2<span class="sc">::</span><span class="fu">funcio</span>() <span class="co"># cridem la funcio() del paquet2 indicant el nom del paquet</span></span></code></pre></div>
+<ul>
+<li>També permet cridar una funció sense carregar el paquet sencer, de manera que ens estalviem temps d’execució i memòria dins d’R.</li>
+</ul>
+<p>A continuació, es mostra com instal·lar els paquets externs des de diversos repositoris.</p>
+<div id="cran" class="section level4" number="2.2.3.1">
+<h4><span class="header-section-number">2.2.3.1</span> CRAN</h4>
+<p>Hi ha moltes funcions que es troben a paquets desenvolupats per tercers que s’han d’instal·lar mitjançant la funció <code>install.packages("paquet")</code> en cas que es trobin al <a href="https://cran.r-project.org/">CRAN</a>. També podem instal·lar més d’un paquet a la vegada si posem els noms dins un vector.</p>
+<p>Per exemple, els paquets <code>dplyr</code>, <code>ggplot2</code> o <code>tidyverse</code>, paquets molt útils que utilitzarem més endevant.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="comencem.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>) <span class="co"># instal·lem un paquet anomenat dplyr</span></span>
+<span id="cb3-2"><a href="comencem.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;tidyverse&quot;</span>)) <span class="co"># instal·lem diversos paquets mitjançant un vector.</span></span></code></pre></div>
+</div>
+<div id="bioconductor" class="section level4" number="2.2.3.2">
+<h4><span class="header-section-number">2.2.3.2</span> Bioconductor</h4>
+<p>Si treballem amb dades biològiques, és probable que la funció que desitgem utilitzar es trobi en un paquet dins del repositori <a href="https://bioconductor.org/"><strong>Bioconductor</strong></a>, un repositori de paquets dedicats al tractament de dades biològiques, sobretot genòmiques. Per a instal·lar paquets que es troben dins de Bioconductor, primer necessitarem instal·lar el paquet <code>BiocManager</code> i utilitzar la funció <code>install()</code> dins d’aquest paquet. Una de les funcions que podem instal·lar és <code>GenomicRanges</code>, un paquet molt útil per tractar amb coordenades genòmiques.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="comencem.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)       <span class="co"># instal·lem BiocManager</span></span>
+<span id="cb4-2"><a href="comencem.html#cb4-2" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;GenomicRanges&quot;</span>) <span class="co"># cridem la funció install() per a instal·lar un paquet de bioconductor</span></span></code></pre></div>
+<p>Dins del paquet <code>BiocManager</code> hi ha altres funcions útils com la funció <code>available()</code> que ens permet obtenir una llista dels paquets disponibles per a poder instal·lar des de Bioconductor.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="comencem.html#cb5-1" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">available</span>() <span class="sc">%&gt;%</span> <span class="do">## l&#39;operador %&gt;% és una &#39;pipe&#39; del paquet &#39;dplyr&#39;.</span></span>
+<span id="cb5-2"><a href="comencem.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() <span class="do">## la funcio head() serveix per a mostrar la part inicial de les dades.</span></span>
+<span id="cb5-3"><a href="comencem.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;A3&quot;        &quot;a4&quot;        &quot;a4Base&quot;    &quot;a4Classif&quot; &quot;a4Core&quot;    &quot;a4Preproc&quot;</span></span></code></pre></div>
+</div>
+<div id="altres" class="section level4" number="2.2.3.3">
+<h4><span class="header-section-number">2.2.3.3</span> Altres</h4>
+<p>A vegades, hi ha paquets que no estan a cap dels dos repositoris anteriors, ja sigui perquè es troben en desenvolupament o perquè l’autor ha preferit carregar-lo a una altra plataforma com, per exemple <a href="https://github.com/">GitHub</a>, un repositori de codi, el qual ara no entrarem a explicar.</p>
+<p>De fet, hi ha moltíssims paquets interessants a GitHub. Alguns d’ells, com hem comentat, no es troben ni al CRAN ni a Bioconductor, mentre que d’altres sí que s’hi troben, però hi ha una versió en desenvolupament més nova que es troba a GitHub.</p>
+<p>Així doncs, per a instal·lar un paquet des de GitHub haurem de fer servir una altra funció (n’hi ha de diferents). Encara que normalment, en el mateix repositori de GitHub ja es sol indicar la manera d’instal·lar el paquet, una de les funcions més utilitzades és la funció <code>install_github</code> del paquet <code>devtools</code> o del paquet <code>remotes</code>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="comencem.html#cb6-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;repositori&quot;</span>)</span>
+<span id="cb6-2"><a href="comencem.html#cb6-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;repositori&quot;</span>)</span></code></pre></div>
+<p>També hi ha altres llocs des d’on podem instal·lar paquets externs, com <a href="https://bitbucket.org/">BitBucket</a> o <a href="https://gitlab.com/">GitLab</a>, que vindrien a ser el mateix que GitHub.</p>
+</div>
+</div>
+<div id="us-bàsic-dr" class="section level3" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> Us bàsic d’R</h3>
+<p>Amb R podem fer multitud de coses. Aquí veurem una petita introducció d’alguns usos bàsics com operacions matemàtiques senzilles o estadística descriptiva… dels quals en parlarem amb més detall en capítols propers.</p>
+<div id="definir-variables" class="section level4 unnumbered">
+<h4>Definir variables</h4>
+<p>Com hem dit, les variables són objectes d’R que emmagatzemen valors, vectors, etc.</p>
+<p>Per a definir una variable a R, hem d’escriure el nom que li volem otorgar, seguida de <code>&lt;-</code> o <code>=</code> i el valor o objecte que se li vol assignar (es recomana utilitzar <code>&lt;-</code>, ja que <code>=</code> es pot confondre amb l’operador <code>==</code> que significa comparació).</p>
+<p>A continuació definirem diverses variables i els assignarem diversos tipus de dades, dels quals en parlarem en detall al capítol 3.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="comencem.html#cb7-1" aria-hidden="true" tabindex="-1"></a>valor    <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb7-2"><a href="comencem.html#cb7-2" aria-hidden="true" tabindex="-1"></a>paraula  <span class="ot">&lt;-</span> <span class="st">&#39;ASBTEC&#39;</span> <span class="co"># les paraules van entre cometes.</span></span>
+<span id="cb7-3"><a href="comencem.html#cb7-3" aria-hidden="true" tabindex="-1"></a>paraula  <span class="ot">&lt;-</span> <span class="st">&quot;ASBTEC significa Associació de Biotecnòlegs de Catalunya&quot;</span></span>
+<span id="cb7-4"><a href="comencem.html#cb7-4" aria-hidden="true" tabindex="-1"></a>vertader <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb7-5"><a href="comencem.html#cb7-5" aria-hidden="true" tabindex="-1"></a>vertader <span class="ot">&lt;-</span> T      <span class="co"># tant TRUE com T són el mateix (en majúscules)</span></span>
+<span id="cb7-6"><a href="comencem.html#cb7-6" aria-hidden="true" tabindex="-1"></a>fals     <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb7-7"><a href="comencem.html#cb7-7" aria-hidden="true" tabindex="-1"></a>fals     <span class="ot">&lt;-</span> F      <span class="co"># tant FALSE com F són el mateix (en majúscules)</span></span>
+<span id="cb7-8"><a href="comencem.html#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="comencem.html#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="comencem.html#cb7-10" aria-hidden="true" tabindex="-1"></a>vector_num     <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">10</span>,<span class="dv">34</span>,<span class="dv">67</span>)     <span class="co"># un vector amb quatre valors 10, 10, 34, 67</span></span>
+<span id="cb7-11"><a href="comencem.html#cb7-11" aria-hidden="true" tabindex="-1"></a>vector_text    <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Hola, com estàs?&quot;</span>, <span class="st">&quot;Molt bé!&quot;</span>)  <span class="co"># un vector amb elements de &quot;text&quot;</span></span></code></pre></div>
+<p>Aquestes variables es poden imprimir escribint el seu nom.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="comencem.html#cb8-1" aria-hidden="true" tabindex="-1"></a>valor</span>
+<span id="cb8-2"><a href="comencem.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 4</span></span>
+<span id="cb8-3"><a href="comencem.html#cb8-3" aria-hidden="true" tabindex="-1"></a>paraula</span>
+<span id="cb8-4"><a href="comencem.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;ASBTEC significa Associació de Biotecnòlegs de Catalunya&quot;</span></span>
+<span id="cb8-5"><a href="comencem.html#cb8-5" aria-hidden="true" tabindex="-1"></a>vertader</span>
+<span id="cb8-6"><a href="comencem.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span>
+<span id="cb8-7"><a href="comencem.html#cb8-7" aria-hidden="true" tabindex="-1"></a>fals</span>
+<span id="cb8-8"><a href="comencem.html#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span>
+<span id="cb8-9"><a href="comencem.html#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="comencem.html#cb8-10" aria-hidden="true" tabindex="-1"></a>vector_num</span>
+<span id="cb8-11"><a href="comencem.html#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 10 10 34 67</span></span>
+<span id="cb8-12"><a href="comencem.html#cb8-12" aria-hidden="true" tabindex="-1"></a>vector_text</span>
+<span id="cb8-13"><a href="comencem.html#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;Hola, com estàs?&quot; &quot;Molt bé!&quot;</span></span></code></pre></div>
+<p>Com podem veure, la variable <code>paraula</code> l’hem definit dues vegades i, en canvi, només ens apareix el segon valor que li hem assignat. Això és <strong>perquè R llegeix el codi de dalt a baix</strong> i, si volem dues variables diferents, no podem definir-les amb el mateix nom, ja que la segona sobrescriurà la primera.</p>
+</div>
+<div id="càlculs-senzills" class="section level4 unnumbered">
+<h4>Càlculs senzills</h4>
+<p>De les primeres coses que podem fer amb R és fer càlculs senzills com si es tractés d’una calculadora fent servir operadors matemàtics bàsics:</p>
+<ul>
+<li>Suma: <code>+</code></li>
+<li>Resta: <code>-</code></li>
+<li>Multiplicació: <code>*</code></li>
+<li>Divisió: <code>/</code></li>
+<li>Potència: <code>**</code> o <code>^</code>.</li>
+<li>Mòdul: <code>%%</code>. El mòdul és el residu que queda en una divisió entre nombres enters.</li>
+<li>Divisió entera: <code>%/%</code>. La divisió entera retorna la part entera del resultat d’una divisió</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="comencem.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Suma</span></span>
+<span id="cb9-2"><a href="comencem.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span><span class="sc">+</span><span class="dv">2</span></span>
+<span id="cb9-3"><a href="comencem.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 11</span></span>
+<span id="cb9-4"><a href="comencem.html#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="comencem.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Resta</span></span>
+<span id="cb9-6"><a href="comencem.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="dv">9-2</span></span>
+<span id="cb9-7"><a href="comencem.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 7</span></span>
+<span id="cb9-8"><a href="comencem.html#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="comencem.html#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Multiplicació</span></span>
+<span id="cb9-10"><a href="comencem.html#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span><span class="sc">*</span><span class="dv">2</span></span>
+<span id="cb9-11"><a href="comencem.html#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 18</span></span>
+<span id="cb9-12"><a href="comencem.html#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="comencem.html#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Divisió</span></span>
+<span id="cb9-14"><a href="comencem.html#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span><span class="sc">/</span><span class="dv">2</span></span>
+<span id="cb9-15"><a href="comencem.html#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 4.5</span></span>
+<span id="cb9-16"><a href="comencem.html#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="comencem.html#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Potència</span></span>
+<span id="cb9-18"><a href="comencem.html#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span><span class="sc">**</span><span class="dv">2</span></span>
+<span id="cb9-19"><a href="comencem.html#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 81</span></span>
+<span id="cb9-20"><a href="comencem.html#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span><span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb9-21"><a href="comencem.html#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 81</span></span>
+<span id="cb9-22"><a href="comencem.html#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-23"><a href="comencem.html#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Mòdul</span></span>
+<span id="cb9-24"><a href="comencem.html#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="fl">9.0</span> <span class="sc">%%</span> <span class="fl">2.0</span></span>
+<span id="cb9-25"><a href="comencem.html#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span>
+<span id="cb9-26"><a href="comencem.html#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="comencem.html#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Divisió entera</span></span>
+<span id="cb9-28"><a href="comencem.html#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span> <span class="sc">%/%</span> <span class="dv">2</span></span>
+<span id="cb9-29"><a href="comencem.html#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 4</span></span></code></pre></div>
+<p>També podem utilitzar diverses funcions bàsiques d’R per realitzar aquest càlculs i molts d’altres. Algunes funcions integrades a R:</p>
+<ul>
+<li>Suma: <code>sum()</code></li>
+<li>Resta: <code>sum()</code> utilitzant nombres negatius</li>
+<li>Multiplicació: <code>prod()</code></li>
+<li>Arrel quadrada: <code>sqrt()</code></li>
+<li>Valor absolut: <code>abs()</code></li>
+<li>Logaritmes: <code>log()</code>, <code>log10()</code>, <code>log2</code></li>
+<li>…</li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="comencem.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># suma</span></span>
+<span id="cb10-2"><a href="comencem.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
+<span id="cb10-3"><a href="comencem.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 10</span></span>
+<span id="cb10-4"><a href="comencem.html#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="comencem.html#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># resta</span></span>
+<span id="cb10-6"><a href="comencem.html#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="dv">1</span>,<span class="sc">-</span><span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb10-7"><a href="comencem.html#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2</span></span>
+<span id="cb10-8"><a href="comencem.html#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="comencem.html#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co"># multiplicació</span></span>
+<span id="cb10-10"><a href="comencem.html#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">prod</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb10-11"><a href="comencem.html#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 120</span></span>
+<span id="cb10-12"><a href="comencem.html#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="comencem.html#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co"># arrel quadrada</span></span>
+<span id="cb10-14"><a href="comencem.html#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">81</span>)</span>
+<span id="cb10-15"><a href="comencem.html#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 9</span></span>
+<span id="cb10-16"><a href="comencem.html#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="comencem.html#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co"># valor absolut</span></span>
+<span id="cb10-18"><a href="comencem.html#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="fu">abs</span>(<span class="sc">-</span><span class="dv">10</span>)</span>
+<span id="cb10-19"><a href="comencem.html#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 10</span></span>
+<span id="cb10-20"><a href="comencem.html#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="comencem.html#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="co"># logarítmes</span></span>
+<span id="cb10-22"><a href="comencem.html#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="at">x =</span> <span class="dv">100</span>) <span class="co"># per defecte, la base de &#39;log()&#39; és el nombre e, però es pot canviar</span></span>
+<span id="cb10-23"><a href="comencem.html#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 4.60517</span></span>
+<span id="cb10-24"><a href="comencem.html#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="at">x =</span> <span class="dv">100</span>, <span class="at">base =</span> <span class="dv">10</span>) <span class="co"># logaritme en base 10</span></span>
+<span id="cb10-25"><a href="comencem.html#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2</span></span>
+<span id="cb10-26"><a href="comencem.html#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="fu">log10</span>(<span class="dv">100</span>)              <span class="co"># logaritme en base 10</span></span>
+<span id="cb10-27"><a href="comencem.html#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2</span></span>
+<span id="cb10-28"><a href="comencem.html#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="fu">log2</span>(<span class="dv">4</span>)                 <span class="co"># logartime en base 2</span></span>
+<span id="cb10-29"><a href="comencem.html#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2</span></span></code></pre></div>
+<p>A més, si en comptes de números inserim vectors numèrics com argument, ens retorna el resultat per a tot aquell vector (dels vectors i altres estructures de dades ja en parlarem més endevant, també de matrius i marcs de dades).</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="comencem.html#cb11-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>) <span class="co">#definim el vector i el guardem a l&#39;objecte v</span></span>
+<span id="cb11-2"><a href="comencem.html#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="comencem.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(v) <span class="co"># ens fa la suma de tots els valors dins el vector.</span></span>
+<span id="cb11-4"><a href="comencem.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 55</span></span>
+<span id="cb11-5"><a href="comencem.html#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="comencem.html#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">log10</span>(v) <span class="co"># ens fa el logaritme de cada valor dins el vector</span></span>
+<span id="cb11-7"><a href="comencem.html#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] 0.0000000 0.3010300 0.4771213 0.6020600 0.6989700 0.7781513 0.8450980</span></span>
+<span id="cb11-8"><a href="comencem.html#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [8] 0.9030900 0.9542425 1.0000000</span></span>
+<span id="cb11-9"><a href="comencem.html#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">#...</span></span></code></pre></div>
+<p>Hi ha altres funcions que ens poden ajudar en molts sentits, encara que no són aquest tipus d’operacions poden ser:</p>
+<ul>
+<li><p><code>round(x, digits)</code>: ens arrodoneix un número decimal o vector amb nombres decimals <code>x</code> a el número de decimals que li indiquem (<code>digits</code>), el qual pot ser 0.</p></li>
+<li><p><code>ceiling(x)</code>: ens retorna el primer nombre enter més gran que el nombre decimal <code>x</code> que li indiquem.</p></li>
+<li><p><code>trunc(x)</code>: ens tronca la part entera del nombre decimal <code>x</code> que li indiquem.</p></li>
+</ul>
+</div>
+<div id="estadística-descriptiva" class="section level4 unnumbered">
+<h4>Estadística descriptiva</h4>
+<p>Una de les altres coses que podem fer és estadística descriptiva molt bàsica. Algunes funcions integrades a R:</p>
+<ul>
+<li>Mitjana: <code>mean()</code></li>
+<li>Mediana: <code>median()</code></li>
+<li>Desviació estàndard: <code>sd()</code></li>
+<li>Variança: <code>var()</code></li>
+<li>Miním: <code>min()</code></li>
+<li>Màxim: <code>max()</code></li>
+<li>Quantils: <code>quantile()</code></li>
+<li>Resum general: <code>summary()</code></li>
+<li>…</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="comencem.html#cb12-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>) <span class="co">#definim el vector i el guardem a l&#39;objecte v</span></span>
+<span id="cb12-2"><a href="comencem.html#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="comencem.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(v)</span>
+<span id="cb12-4"><a href="comencem.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5.454545</span></span>
+<span id="cb12-5"><a href="comencem.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(v)</span>
+<span id="cb12-6"><a href="comencem.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5</span></span>
+<span id="cb12-7"><a href="comencem.html#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(v)</span>
+<span id="cb12-8"><a href="comencem.html#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2.876235</span></span>
+<span id="cb12-9"><a href="comencem.html#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(v)</span>
+<span id="cb12-10"><a href="comencem.html#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 8.272727</span></span>
+<span id="cb12-11"><a href="comencem.html#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(v)</span>
+<span id="cb12-12"><a href="comencem.html#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span>
+<span id="cb12-13"><a href="comencem.html#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(v)</span>
+<span id="cb12-14"><a href="comencem.html#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 10</span></span>
+<span id="cb12-15"><a href="comencem.html#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(v)</span>
+<span id="cb12-16"><a href="comencem.html#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   0%  25%  50%  75% 100% </span></span>
+<span id="cb12-17"><a href="comencem.html#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1.0  3.5  5.0  7.5 10.0</span></span>
+<span id="cb12-18"><a href="comencem.html#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(v)</span>
+<span id="cb12-19"><a href="comencem.html#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span></span>
+<span id="cb12-20"><a href="comencem.html#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   1.000   3.500   5.000   5.455   7.500  10.000</span></span>
+<span id="cb12-21"><a href="comencem.html#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-22"><a href="comencem.html#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co">#...</span></span></code></pre></div>
+</div>
+<div id="altres-funcions" class="section level4 unnumbered">
+<h4>Altres funcions</h4>
+<p>Mitjançant algunes funcions d’R podem saber diverses informacions sobre el sistema:</p>
+<ul>
+<li>Informació general del sistema operatiu amb <code>Sys.info()</code>: nom, versió, …</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="comencem.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.info</span>()</span>
+<span id="cb13-2"><a href="comencem.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                             sysname </span></span>
+<span id="cb13-3"><a href="comencem.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                            &quot;Darwin&quot; </span></span>
+<span id="cb13-4"><a href="comencem.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                             release </span></span>
+<span id="cb13-5"><a href="comencem.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                            &quot;19.6.0&quot; </span></span>
+<span id="cb13-6"><a href="comencem.html#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                             version </span></span>
+<span id="cb13-7"><a href="comencem.html#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &quot;Darwin Kernel Version 19.6.0: Tue Nov 10 00:10:30 PST 2020; root:xnu-6153.141.10~1/RELEASE_X86_64&quot; </span></span>
+<span id="cb13-8"><a href="comencem.html#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                            nodename </span></span>
+<span id="cb13-9"><a href="comencem.html#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                             &quot;macbookamitjavi.local&quot; </span></span>
+<span id="cb13-10"><a href="comencem.html#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                             machine </span></span>
+<span id="cb13-11"><a href="comencem.html#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                            &quot;x86_64&quot; </span></span>
+<span id="cb13-12"><a href="comencem.html#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                               login </span></span>
+<span id="cb13-13"><a href="comencem.html#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                              &quot;root&quot; </span></span>
+<span id="cb13-14"><a href="comencem.html#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                                user </span></span>
+<span id="cb13-15"><a href="comencem.html#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                           &quot;ieo5089&quot; </span></span>
+<span id="cb13-16"><a href="comencem.html#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                      effective_user </span></span>
+<span id="cb13-17"><a href="comencem.html#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                           &quot;ieo5089&quot;</span></span></code></pre></div>
+<ul>
+<li>Informació de la sessió d’R amb <code>sessionInfo()</code>: versió, plataforma, paquets carregats… Això és útil a l’hora de buscar errors, ja que moltes vegades els errors depenen en l’entorn (<em>environment</em>) de treball.</li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="comencem.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span>
+<span id="cb14-2"><a href="comencem.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; R version 4.0.3 (2020-10-10)</span></span>
+<span id="cb14-3"><a href="comencem.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Platform: x86_64-apple-darwin17.0 (64-bit)</span></span>
+<span id="cb14-4"><a href="comencem.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Running under: macOS Catalina 10.15.7</span></span>
+<span id="cb14-5"><a href="comencem.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb14-6"><a href="comencem.html#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Matrix products: default</span></span>
+<span id="cb14-7"><a href="comencem.html#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib</span></span>
+<span id="cb14-8"><a href="comencem.html#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib</span></span>
+<span id="cb14-9"><a href="comencem.html#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb14-10"><a href="comencem.html#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; locale:</span></span>
+<span id="cb14-11"><a href="comencem.html#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span></span>
+<span id="cb14-12"><a href="comencem.html#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb14-13"><a href="comencem.html#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; attached base packages:</span></span>
+<span id="cb14-14"><a href="comencem.html#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
+<span id="cb14-15"><a href="comencem.html#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb14-16"><a href="comencem.html#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; other attached packages:</span></span>
+<span id="cb14-17"><a href="comencem.html#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] scales_1.1.1    forcats_0.5.0   stringr_1.4.0   dplyr_1.0.3    </span></span>
+<span id="cb14-18"><a href="comencem.html#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [5] purrr_0.3.4     readr_1.4.0     tidyr_1.1.2     tibble_3.0.5   </span></span>
+<span id="cb14-19"><a href="comencem.html#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [9] ggplot2_3.3.3   tidyverse_1.3.0</span></span>
+<span id="cb14-20"><a href="comencem.html#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb14-21"><a href="comencem.html#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
+<span id="cb14-22"><a href="comencem.html#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] tidyselect_1.1.0    xfun_0.20           haven_2.3.1        </span></span>
+<span id="cb14-23"><a href="comencem.html#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [4] colorspace_2.0-0    vctrs_0.3.6         generics_0.1.0     </span></span>
+<span id="cb14-24"><a href="comencem.html#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [7] htmltools_0.5.1.1   yaml_2.2.1          rlang_0.4.10       </span></span>
+<span id="cb14-25"><a href="comencem.html#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [10] pillar_1.4.7        glue_1.4.2          withr_2.4.1        </span></span>
+<span id="cb14-26"><a href="comencem.html#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [13] DBI_1.1.1           dbplyr_2.0.0        modelr_0.1.8       </span></span>
+<span id="cb14-27"><a href="comencem.html#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [16] readxl_1.3.1        lifecycle_0.2.0     munsell_0.5.0      </span></span>
+<span id="cb14-28"><a href="comencem.html#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [19] gtable_0.3.0        cellranger_1.1.0    rvest_0.3.6        </span></span>
+<span id="cb14-29"><a href="comencem.html#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [22] codetools_0.2-18    evaluate_0.14       knitr_1.30         </span></span>
+<span id="cb14-30"><a href="comencem.html#cb14-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [25] fansi_0.4.2         highr_0.8           broom_0.7.3        </span></span>
+<span id="cb14-31"><a href="comencem.html#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [28] Rcpp_1.0.6          backports_1.2.1     BiocManager_1.30.10</span></span>
+<span id="cb14-32"><a href="comencem.html#cb14-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [31] jsonlite_1.7.2      fs_1.5.0            hms_1.0.0          </span></span>
+<span id="cb14-33"><a href="comencem.html#cb14-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [34] digest_0.6.27       stringi_1.5.3       bookdown_0.21      </span></span>
+<span id="cb14-34"><a href="comencem.html#cb14-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [37] grid_4.0.3          cli_2.2.0           tools_4.0.3        </span></span>
+<span id="cb14-35"><a href="comencem.html#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [40] magrittr_2.0.1      crayon_1.3.4        pkgconfig_2.0.3    </span></span>
+<span id="cb14-36"><a href="comencem.html#cb14-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [43] ellipsis_0.3.1      xml2_1.3.2          reprex_0.3.0       </span></span>
+<span id="cb14-37"><a href="comencem.html#cb14-37" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [46] lubridate_1.7.9.2   assertthat_0.2.1    rmarkdown_2.6      </span></span>
+<span id="cb14-38"><a href="comencem.html#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [49] httr_1.4.2          rstudioapi_0.13     R6_2.5.0           </span></span>
+<span id="cb14-39"><a href="comencem.html#cb14-39" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [52] compiler_4.0.3</span></span></code></pre></div>
+<ul>
+<li>Data, hora, fus horari… amb <code>Sys.Date()</code>, <code>Sys.time()</code> i <code>Sys.timezone()</code></li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="comencem.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.Date</span>()      <span class="co"># data</span></span>
+<span id="cb15-2"><a href="comencem.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;2021-01-30&quot;</span></span>
+<span id="cb15-3"><a href="comencem.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()      <span class="co"># data i hora</span></span>
+<span id="cb15-4"><a href="comencem.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;2021-01-30 21:10:56 CET&quot;</span></span>
+<span id="cb15-5"><a href="comencem.html#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.timezone</span>()  <span class="co"># fus horari</span></span>
+<span id="cb15-6"><a href="comencem.html#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;Europe/Madrid&quot;</span></span></code></pre></div>
+</div>
+</div>
+<div id="establir-un-directori-de-treball" class="section level3" number="2.2.5">
+<h3><span class="header-section-number">2.2.5</span> Establir un directori de treball</h3>
+<p>Per a <strong>establir el directori de treball</strong>, tenim dues opcions:</p>
+<ul>
+<li><p>A la barra superior, anar <em>Session</em>&gt;<em>Set Working Directory</em> i triar l’opció que es vol:</p>
+<ul>
+<li><em>To Project Directory</em>: el directori en el que està definit el projecte. Aquesta opció només és útil si es té un projecte d’R obert, cosa que no és necessària, però que és útil en alguns casos.</li>
+<li><em>To Source File Location</em>: si treballem amb scripts o altres tipus de fitxers, aquesta opció ens establirà el directori de treball a la ubicació on hi hagi el fitxer guardat.</li>
+<li><em>To Files Pane Location</em>: la ubicació on tenim el panell de visualització en el moment d’activar aquesta opció.</li>
+<li><em>Choose Directory…</em>: aquesta és l’opció més senzilla ja que ens permet triar molt fàcilment la ubicació on volem establir el directori de treball.</li>
+</ul></li>
+<li><p>La funció <code>setwd()</code> i posant la ruta (entre cometes) al directori/carpeta on vols que R cerqui les dades. Aquesta opció és equivalent a l’última opció de l’apartat anterior. Per exemple:</p>
+<pre><code>setwd(&quot;./Adria/Other/ASBTEC/cursos_R/&quot;)</code></pre></li>
+</ul>
+<p>El directori de treball es pot canviar sempre que es vulgui mitjançant qualsevol de les opcions anteriors.</p>
+<p>En cas de crear o obrir un projecte d’R, el directori de treball s’establirà en el directori del projecte.</p>
+</div>
+<div id="utilitzar-scripts-dr" class="section level3" number="2.2.6">
+<h3><span class="header-section-number">2.2.6</span> Utilitzar <em>scripts</em> d’R</h3>
+<p>Com ja hem comentat amb anterioritat, un <em>script</em> d’R no és res més que un fitxer de text amb extensió <code>.R</code> que ens permet executar el codi d’R tant a la consola com independentment d’aquesta. A més també el podem utilitzar per a tenir una història de les ordres que hem executat i modificar-les de manera més simple per tal de corregir els errors que ens trobem.</p>
+<p>Per a crear un <em>script</em> d’R, hem de clicar a la icona <i class="fa-file-medical"></i> de la part superior-esquerra de la pantalla i clicar a <em>R Script</em>. Un cop haguem fet això, ens apareixerà un nou fitxer (ex. <em>Untitled1</em>) en el qual podrem escriure tot el codi que volguem.</p>
+<p>A més, també podem insertar comentaris mitjançant el coixinet (<strong><em>#</em></strong>). Les línies d’un <em>script</em> que comencin amb aquest caràcter no seran evaluades i ens permetran inserir text que ens ajudi a entendre el que el codi està fent, sobretot si hem de compartir aquest codi.</p>
+<p>Un exemple de codi que podem posar dins un <em>script</em> és el següent:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="comencem.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># això és un comentari i no és executat.</span></span>
+<span id="cb17-2"><a href="comencem.html#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="comencem.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~&quot;</span>) <span class="co"># amb aquesta funció, canvio el directori de treball al meu &#39;home&#39;.</span></span>
+<span id="cb17-4"><a href="comencem.html#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() <span class="co"># amb aquesta funció puc saber quin és el meu directori de treball actual.</span></span>
+<span id="cb17-5"><a href="comencem.html#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="comencem.html#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co"># aquí podríem inserir més codi, carregar llibreries o definir funcions i variables</span></span>
+<span id="cb17-7"><a href="comencem.html#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># però això ho deixearem per a més endevant</span></span></code></pre></div>
+</div>
+<div id="utilitzar-documents-rmarkdown" class="section level3" number="2.2.7">
+<h3><span class="header-section-number">2.2.7</span> Utilitzar documents Rmarkdown</h3>
+<p><code>Rmarkdown</code> (<code>.Rmd</code>) és un format de fitxer que combina el format <code>R</code> i el format <code>markdown</code>. Això significa que podem crear un document amb extensió <code>.Rmd</code> que ens permetrà escriure tot el text que volguem mitjançant la sintaxis de <code>markdown</code> i, a més, inserir blocs de codi que funcionaran com <em>scripts</em> d’R que poden ser executats independentments els uns dels altres i que mostren el resultat dins el mateix doxument <code>Rmarkdown</code>. De manera opcional, també es poden utilitzar altres llenguatges, com <code>Python</code> i <code>Bash</code> dins de cada bloc de codi, però s’han tenir les dependències necessàries instal·lades i aquest curs no preveu ensenyar-les.</p>
+<p>Finalment, també es poden convertir (o <em>renderitzar</em>) els documents <code>Rmarkdown</code> a HTML, PDF, Word i altres, cosa que fa que aquest format sigui molt útil per a fer informes (o per aquest curs). A continuació veurem l’ús bàsic dels Rmarkdown.</p>
+<p><a href="https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">Aquí</a> teniu un petit resum (<em>Cheat sheet</em>) del funcionament d’<code>Rmarkdown</code>. A continuació us en fem una petita introducció.</p>
+<p>Per a crear un document Rmarkdown:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="comencem.html#cb18-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;assets/CrearRmarkdown.png&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-24"></span>
+<img src="assets/CrearRmarkdown.png" alt="Passos per crear un document Rmarkdown: 1) iniciar la creació del document; 2) posar títol al document i crear-lo; 3) Rmarkdown per defecte i algunes de les seves característiques." width="90%" />
+<p class="caption">
+Figure 2.1: Passos per crear un document Rmarkdown: 1) iniciar la creació del document; 2) posar títol al document i crear-lo; 3) Rmarkdown per defecte i algunes de les seves característiques.
+</p>
+</div>
+<ul>
+<li><p>Clicar a la icona <em>del document amb el signe +</em> de la part superior-esquerra de la pantalla i clicar a <em>R Markdown</em>.</p></li>
+<li><p>Ens apareixerà una nova finestra on podrem posar el títol i autor del document Rmarkdown, així com el format del document que volem crear amb aquest Rmarkdown.</p>
+<ul>
+<li><p><em>Title</em>: títol del document Rmarkdown</p></li>
+<li><p><em>Author</em>: autor del document Rmarkdown</p></li>
+<li><p><em>Default Output Format</em>: format del document que voldrem crear a partir del document Rmarkdown. HTML és com una pàgina web, és dinàmica i fàcil d’entendre; per a crear un PDF necessitem LaTeX instal·lat.</p></li>
+</ul></li>
+<li><p>S’haurà creat un document per defecte, que ens dona unes petites instruccions i ens ajuda a entendre el funcionament dels documents Rmarkdown.</p>
+<ul>
+<li>Al principi veureum una capçalera entre dos blocs de guions (<code>---</code>). Aquesta capçalera és on insertarem el títol (especificat en el pas 2), l’autor i la data (que són opcionals) i el format del fitxer a crear a partir del document Rmarkdown (és el que hem especificat al pas 2).</li>
+<li>A la icona de <em>Knit</em> (a dalt), podem</li>
+<li>A la icona <em>de l’engranatge </em> (a dalt) podem configurar algunes opcions del document Rmarkdown, així com les del document de sortida. Aquestes opcions del document de sortida també les podem indicar a la capçalera, per exemple:</li>
+</ul>
+<pre><code>output:
+  html_document:        # indiquem que volem un document HTML
+    toc: yes            # indiquem que volem un índex (toc = &#39;table of contents&#39;)
+    toc_float: yes      # indiquem que volem que l&#39;índex sigui flotant  
+    toc_depth: 3        # l&#39;índex tindrà els títols fins a dos subtítols (títol, subtítol, subsubtítol)
+    code_folding: hide  # indiquem que volem que s&#39;amagui tot el codi.</code></pre>
+<ul>
+<li><p>En el document Rmarkdown que es crea per defecte veurem un bloc de codi d’R entre dos blocs de 3 accents oberts i, entre claus, una <code>r</code> , un títol <code>setup</code> i unes opcions <code>include = FALSE</code>. La lletra <code>r</code> indica que el codi que escrivim ha de ser evaluat com a codi d’R (també podríem posar <code>python</code>, <code>bash</code> o res, en cas que no volguessim evaluar el codi però volguéssim indicar que es tracta de codi); el títol no és necessari, però és recomanable; les opcions són molt útils, <code>include = FALSE</code> significa que no volem incloure el bloc (ni els resultats d’aquest) al document final, però sí que volem executar el codi.</p></li>
+<li><p>El primer bloc de codi (<code>setup</code>) és important perquè ens estableix opcions per a tots els blocs de codi i no és recomanable esborrar-lo. Per defecte ens apareix <code>echo = TRUE</code>, que significa que volem que es mostrin els blocs de codi. Podeu trobar una llista més completa d’aquetes opcions pels blocs (<em>chunk options</em>) en el següent enllaç: <a href="https://yihui.org/knitr/options/" class="uri">https://yihui.org/knitr/options/</a>.</p></li>
+</ul></li>
+</ul>
+<div id="sintaxi-de-markdown" class="section level4 unnumbered">
+<h4>Sintaxi de markdown</h4>
+<p>El text en format <code>markdown</code> és tot aquell text que no estigui dins de blocs de codi i que, per tant, no serà evaluat com a tal. És similar al format de text dels documents <em>.txt</em> però amb més opcions de format (títols, negreta, cursiva…).</p>
+<p>Comencem amb la sintaxi de <code>markdown</code>. A continuació teniu algunes instruccions, encara que també podeu mirar la <a href="https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf"><em>cheat sheet</em> de Rmarkdown</a>:</p>
+<ul>
+<li><p><strong>Títols/capçaleres (<em>headers</em>)</strong>: per als títols de cada apartat útilitarem els coixinets (ex. <code># Apartat 1</code>) i per a cada subapartat afegirem un coixinet més (ex. <code>## Subapartat 1.1</code>, <code>### Subapartat 1.1.1</code>, …).</p></li>
+<li><p><strong>Text</strong>: el text normal l’escriurem com si es tractés d’un document de text.</p></li>
+<li><p><strong>Cursiva</strong>: el text en cursiva ha de tenir un asterisc (ex. <code>*cursiva*</code> –&gt; <em>cursiva</em>) o guió baix. (ex. <code>_cursiva_</code> –&gt; <em>cursiva</em>) a cada banda.</p></li>
+<li><p><strong>Negreta</strong>: el text en negreta ha de tenir dos asteriscos (ex. <code>**negreta**</code> –&gt; <em>negreta</em>) o guions baixos. (ex. <code>__negreta__</code> –&gt; <em>cursiva</em>) a cada banda.</p></li>
+<li><p><strong>Subíndex</strong>: els subíndex els hem d’escriure amb <code>~</code> (ex. <code>~subíndex~</code>–&gt; <sub>subíndex</sub>) a cada banda.</p></li>
+<li><p><strong>Superíndex</strong>: els superíndex els hem d’escriure amb <code>^</code> (ex. <code>^superíndex^</code>–&gt; <sup>superíndex</sup>) a cada banda.</p></li>
+<li><p><strong>Text ratllat</strong>: per a fer text ratllat, hem d’escriure <code>~~</code> a cada costat.</p></li>
+<li><p><strong>Text en format codi</strong>: el text amb font de codi (<em>Verbatim</em>) l’hem d’escriure amb un accent obert (`) a cada banda en cas que volguéssim escriure dins la mateixa línea de text o entre blocs de tres accents oberts (```) en cas que volguessim fer un bloc de codi.</p>
+<div class="figure">
+<img src="assets/bloc_de_text_codi.png" alt="" />
+<p class="caption">BlocCodi</p>
+</div></li>
+<li><p><strong>Codi en R</strong>: a Rmarkdown podem escriure codi en R dins de la mateixa línia com codi normal però amb una <strong>r</strong> derrere el primer ` o en un bloc a part, mitjançant els tres accents:</p>
+<div class="figure">
+<img src="assets/bloc_codi_R.png" alt="" />
+<p class="caption">BlocCodiR</p>
+</div></li>
+<li><p><strong>Hipervincles</strong>: per a inserir hipervincles hem d’escriure la paraula que farà de vincle entre claudàtors <code>[]</code> seguida de la ruta/<em>path</em> (URL o <em>path</em> al fitxer dins el sistema) entre parèntesis <code>()</code> (ex. <code>[ASBTEC](https://asbtec.org)</code> –&gt; <a href="https://asbtec.org">ASBTEC</a>).</p></li>
+<li><p><strong>Imatges</strong>: per a inserir imatges (JPEG, PNG…) hem de fer servir la mateixa sintàxi que amb els hipervincles, però amb un signe d’exclamació <code>!</code> a davant (<code>![text](ruta_de_la_imatge_dins_el_sistema_o_URL_de_la_imatge)</code>):</p>
+<p><code>![LogoAsbtec](https://asbtec.org/wp-content/uploads/2020/05/cropped-logo2.jpg)</code>
+<img src="https://asbtec.org/wp-content/uploads/2020/05/cropped-logo2.jpg" alt="LogoAsbtec" /></p>
+<p><em>Per a inserir imatges també podem fer-ho mitjançant algunes funcions d’R com <code>knitr::include_graphics()</code></em></p></li>
+<li><p><strong>Línies horitzontals (<em>hrules</em>)</strong>: Per a fer línies horitzontals hem de fer servir <code>---</code>, <code>***</code> o <code>___</code>. Per exemple:</p>
+<hr /></li>
+<li><p><strong>Equacions</strong>: per escriure en text en format d’equació, hem d’utilitzar els blocs de <code>$</code> per a fer-ho en una mateixa línea o <code>$$</code> per a fer un bloc separat i utilitzar llenguatge de làtex. També podem fer servir lletres gregues i tot tipus d’operadors matemàtics: <a href="https://rpruim.github.io/s341/S19/from-class/MathinRmd.html">aquí</a> teniu una llista amb tot tipus d’equacions. Per exemple:</p>
+<ul>
+<li><p><code>$A = \pi * r^2$</code> –&gt; <span class="math inline">\(A = \pi * r^2\)</span></p></li>
+<li><p>I utilitzant <code>$$</code>, per exemple, la següent funció <code>$$\sum_{i=1}^{k} x_{i}$$</code> dona lloc a <span class="math display">\[\sum_{i=1}^{k} x_{i}\]</span></p></li>
+</ul></li>
+<li><p><strong>Llistes</strong>: a markdown es poden fer diversos tipus de llistes: ordenades (numèriques) i no ordenades.</p>
+<ul>
+<li><strong>Llistes no ordenades</strong>: per a fer una llista no ordenada farem servir l’asterisc <code>*</code> al principi de cada objecte de la llista. Per exemple:</li>
+</ul>
+<pre><code>* Objecte 1</code></pre>
+<ul>
+<li><strong>Llistes ordenades</strong>: per a fer llistes ordenades ho podem fer amb números, simplement indicant <code>1.</code>, <code>2.</code>… al principi de cada objecte de la llista, per exemple:</li>
+</ul>
+<pre><code>1. Objecte 1
+2. Objecte 2</code></pre></li>
+<li><p><strong>Subllistes</strong>: per a fer llistes dins una altra llista, hem de posar una identació (tabulació o quatre espais) i utilitzar <code>+</code> al principi de cada element de la subllista. Per exemple:</p></li>
+</ul>
+<pre><code>* element 1:
+
+  + element 1.1
+  + element 1.2</code></pre>
+<ul>
+<li><p><em>Taules</em>: amb <em>Markdown</em> també podem fer taules (treballem amb <em>RMarkdown</em> també les podem fer creant una matriu o <em>data frame</em> amb R i imprimint-lo al mateix document). Per a construir la taula, només hem d’utilitzar guions (<code>-</code>) com a línees horiziontals per a separar el títol de les columnes, barres verticals (<code>|</code>) com a línees verticals per a fer les columnes i dos punts (<code>:</code>) per a alinear el text. Per exemple:</p>
+<pre><code>| Per defecte | Alineació a la dreta | Alineació a l&#39;esquerra | Centrat |
+| ----------- | -------------------: | :--------------------- | :-----: | 
+| ASBTEC      | No cal mantenir l&#39;alineació de les barres verticals per a poder fer la taula, encara que és desitjable per tal de fer el document més llegible | Esquerra  | Mig
+| 13.466      | Biotecnologia        | Inicia&#39;t a R           | 2021    |</code></pre>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="33%" />
+<col width="36%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Per defecte</th>
+<th align="right">Alineació a la dreta</th>
+<th align="left">Alineació a l’esquerra</th>
+<th align="center">Centrat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ASBTEC</td>
+<td align="right">No cal mantenir l’alineació de les barres verticals per a poder fer la taula encara que és desitjable per tal de fer el document més llegible</td>
+<td align="left">Esquerra</td>
+<td align="center">Mig</td>
+</tr>
+<tr class="even">
+<td>13.466</td>
+<td align="right">Biotecnologia</td>
+<td align="left">Inicia’t a R</td>
+<td align="center">2021</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+<p>Hi ha moltes més coses que es poden fer amb <em>Markdown</em> i <em>R Markdown</em>, però aquí només us n’hem fet una petita introducció.</p>
+</div>
+<div id="altres-llenguatges" class="section level4 unnumbered">
+<h4>Altres llenguatges</h4>
+<p>A part de la sintàxis específica (mirar <a href="https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf"><em>cheat sheet</em> d’Rmarkdown</a>), dins un document <em>Rmarkdown</em> podem utilitzar llenguatge <strong>LaTeX</strong>, en cas que volguem convertir el document en PDF, i <strong>HTML</strong> en cas que volguem convertir el document a HTML, entre d’altres.</p>
+<p>També podem utilitzar (i crear) plantilles de <em>LaTeX</em>, <em>pandoc</em>… i així obtindrem un document més organitzat.</p>
+<p>En aquest curs no s’ensenyarà res d’això, però si voleu aprendre’n més, podeu fer un cop d’ull a <a href="https://bookdown.org/yihui/rmarkdown/">aquest llibre</a>.</p>
+</div>
+</div>
+<div id="crear-un-projecte-dr" class="section level3" number="2.2.8">
+<h3><span class="header-section-number">2.2.8</span> Crear un projecte d’R</h3>
+<p>En alguns casos pot ser molt útil crear un projecte d’R en comptes de treballar sense projecte. En cas de principiants no és necessari, però crear un projecte d’R ens pot ser molt útil per a:</p>
+<ul>
+<li>Tenir tot el codi i els fitxers relacionat amb un projecte en una mateixa ubicació.</li>
+<li>Poder controlar i compartir el vostre codi més fàcilment mitjançant repositoris de <em>git</em>. Aquesta opció és més avançada.</li>
+<li>Per a quan volguem fer pàgines web (encara que siguin locals).</li>
+<li>…</li>
+</ul>
+<p>Per a crear un nou projecte d’R (<em>Rproject</em>), s’han de seguir els passos esmentats a continuació:</p>
+<ol style="list-style-type: decimal">
+<li>Clicar al botó de la part superior-dreta on hi diu <em>Project</em> i clicar a <em>New Project</em>. En cas de tenir un projecte obert, en comptes de <em>Project</em>, a la part superior-dreta hi hagi el nom del projecte en qüestió.</li>
+<li>Si RStudio ens demana de guardar alguns fitxers, indicar si volem guardar-los o no i clicar a <em>Don’t Save</em> o <em>Save</em>/<em>Save Selected</em>.</li>
+<li>Escollir si volem crear un nou directori pel projecte o si el volem posar a un directori ja existent. És recomanable crear nou directori.</li>
+<li>Segons els paquets i llibreries que tinguem instal·lats, ens apareixaran diversos tipus de projectes per a crear. El que apareix sempre és <em>New Project</em> que ve a ser el projecte normal.</li>
+<li>Indicar del directori que contindrà el projecte del i i la ubicació d’aquest directori. Opcionalment, podeu indicar si en el projecte voleu crear un repositori de git (<em>GitHub</em>, <em>GitLab</em> o <em>BitBucket</em>), però aquesta opció no és recomanable per aquelles persones que no estiguin habituades a utilitzar git.</li>
+<li>Finalment, veureu com RStudio us crea un nou directori amb diversos fitxers a dins. El tipus de projecte que hem indicat al punt 4 (<em>New Project</em>), ens generarà un fitxer <code>nom_projecte.Rproj</code> on <code>nom_projecte</code> és el nom que li hem donat al nostre projecte. Altres tipus de projectes ens poden altres fitxers i carpetes, però no en parlarem en aquest capítol.</li>
+</ol>
+<p>Sempre que creeu un nou projecte o l’obriu mitjançant el fitxer <code>nom_projecte.Rproj</code>, aquest us apareixerà a una llista de projectes dins el menú <em>Project</em> que hem comentat al pas 1, de manera que podeu accedir a diversos projectes de manera molt ràpida i, fins i tot, obrir-los a sessions d’RStudio (per tant, entorns de treball) independents.</p>
+</div>
+</div>
+<div id="exercicis." class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Exercicis.</h2>
+<div id="exercici-1" class="section level3 unnumbered">
+<h3>Exercici 1</h3>
+<p><strong>a) Obre RStudio i crea un projecte anomenat <code>curs_R_asbtec</code> en un nou directori. D’aquesta manera podràs accedir fàcilment al curs cada vegada que obris RStudio.</strong></p>
+<p><strong>b) Crea un <em>script</em> d’R o un document <em>Rmd</em> i guarda’l com a <code>curs_asbtec.R</code> (probablement sigui més útil un <em>Rmd</em>). D’aquesta manera podràs guardar els apunts/exercicis que facis en el curs (pots fer-ne un de sol per a tot el curs o diversos per a cada capítol, i separar apunts i exercicis o fer-ho tot junt).</strong></p>
+<p><strong>c) Insereix un comentari (en el cas de l’<em>script</em>) o un títol (en el cas del document <em>Rmd</em>) amb <code>#</code> indicant el títol del curs, i els subtítols conseqüents (<code>##</code>…) indicant els títols dels capítols, etc.</strong></p>
+<p style="font-size:10px">
+<strong>Nota de l’exerici 1: els següents exercicis els pots fer dins el document creat en aquest exercici 1</strong>
+</p>
+</div>
+<div id="exercici-2" class="section level3 unnumbered">
+<h3>Exercici 2</h3>
+<p><strong>Defineix una variable <code>hola</code> a la qual assignaràs la salutació ‘Hola, món!’ Després imprimeix aquesta variable</strong></p>
+</div>
+<div id="exercici-3" class="section level3 unnumbered">
+<h3>Exercici 3</h3>
+<p><strong>Escriu les funcions corresponents i instal·la els paquets seguents (la majoria es troben al CRAN, encara que algun d’ells es troba a Biocondctor):</strong></p>
+<ul>
+<li><code>BiocManager</code>: per a instal·lar paquets de Bioconductor. ^*obligatori^</li>
+<li><code>rmarkdown</code>: ens permetrà utilitzar algunes funcions dels documents RMarkdown. ^*obligatori^</li>
+<li><code>dplyr</code>: molt útil per a tractar dades i modificar taules. També accessible instal·lant el paquet <code>tidyverse</code>. ^*obligatori^</li>
+<li><code>ggplot2</code>: molt útil per a visualitzar dades i fer gràfics. També accessible instal·lant el paquet <code>tidyverse</code>. ^*obligatori^</li>
+<li><code>GenomicRanges</code>: molt útil per a tractar amb coordenades genòmiques.</li>
+<li><code>Biostrings</code>: molt útil per a tractar amb seqüències d’ADN, ARN, proteïnes…</li>
+</ul>
+<p style="font-size:10px">
+<strong>Nota de l’exerici 3: és possible que us apareixin preguntes a la consola com:</strong>
+</p>
+<p style="font-size:10px">
+<code>Update all/some/none? [a/s/n]</code>: aquesta pregunta significa si voleu actualitzar paquets ja instal·lats (<code>a</code> = all, <code>s</code> = some, <code>n</code>= none).
+</p>
+<p style="font-size:10px">
+<code>Do you want to install from sources the packages which need compilation? (Yes/no/cancel)</code>: aquesta pregunta és per instal·lar paquets en els quals depèn el paquet que voleu instal·lar i que necessiten compilació. En teoria no us hauria d’apareixer, però si us apareix i no teniu el programari requerit per a compilar, pregunteu o no instal·leu el paquet en qüestió.
+</p>
+</div>
+<div id="exercici-4" class="section level3 unnumbered">
+<h3>Exercici 4</h3>
+<p><strong>a) Juga amb els operadors matemàtics (ex. <code>+</code>,<code>-</code>).</strong></p>
+<p><strong>b) Juga amb les funcions d’operacions matemàtiques (ex. <code>sum()</code>…).</strong>
+<strong>c) Juga amb les funcions d’estadística descriptiva (ex. <code>mean()</code>…).</strong></p>
+</div>
+<div id="exercici-5" class="section level3 unnumbered">
+<h3>Exercici 5</h3>
+<p><strong>Utilitza la següent línia de codi <code>v &lt;- c(1,2,3,4,5,6,7,8,9,10)</code> per a definir el vector <code>v</code> i fes el mateix que a l’exercici 4, però amb el vector <code>v</code>.</strong></p>
+</div>
+</div>
+<div id="recursos-per-a-laprenentatge-1" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Recursos per a l’aprenentatge</h2>
+<ol style="list-style-type: decimal">
+<li>Rafael A. Irizarry. <strong>Introduction to Data Science: Chapter 1</strong>. Online <a href="https://rafalab.github.io/dsbook/index.html">aquí</a>.</li>
+<li>RStudio. <strong>Rmarkdown cheat sheet</strong>. Online <a href="https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">aquí</a>.</li>
+<li>Yihui Xie, J. J. Allaire, Garrett Grolemund <strong>R Markdown: The Definitive Guide</strong>. Online <a href="https://bookdown.org/yihui/rmarkdown/">aquí</a>.</li>
+<li>Randall Pruim. <strong>Mathematics in R Markdown</strong>. Online <a href="https://rpruim.github.io/s341/S19/from-class/MathinRmd.html">aquí</a></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introducció.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="solucions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true,
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

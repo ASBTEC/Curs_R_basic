@@ -1,0 +1,147 @@
+# Solucions {-}
+
+## Capítol 1. Introduccio {-}
+
+## Capítol 2. Comencem {-}
+
+### Exercici 1. {-}
+
+#### a) {-}
+
+Seguir les instruccions del capítol.
+
+#### b) {-}
+
+Seguir les instruccions del capítol. Es pot fer un _script_ o un document _RMarkdown_, encara que és més recomanable el segon perquè permet escriure text sense format de codi que és més fàcil per explicar i entendre el que es fa.
+
+#### c) {-}
+
+L'ideal seria l'estructura següent:
+
+* *Script*: 
+
+  ```
+  # Cursos ASBTEC - Inicia't a R
+  
+  ## Capítol 1.
+  
+  ## Capítol 2.
+  
+  ### ...
+  ```
+  
+* *RMarkdown*: en el cas d'*RMarkdown* tenim l'avantatge de la capçalera *YAML* que ens permet posar títol, autor, data... en el document que volem crear, per tant, el títol del curs no és necessari posar-lo en un comentari. Així doncs l'estructura ideal seria la següent (encara que podeu crear la que vosaltres volgueu):
+
+  ```
+  ---
+  title: "Cursos ASBTEC - Inicia't a R 
+  author: "opcional"
+  date: "opcional"
+  output: html_document
+  ---
+  
+  # Capítol 1
+  
+  Apunts...
+  
+  # Capítol 2.
+  
+  Apunts...
+  
+  ## Exercicis:
+  
+  ### Exercici 1.
+  
+  ...
+  ```
+
+### Exercici 2. {-}
+
+```{r}
+# Definim la variable 'hola'. El text ha d'anar entre cometes!
+hola <- 'Hola, món!'
+
+# Imprimim la variable
+hola # escrivint-la.
+print(hola) # utilitzant la funció print
+
+```
+
+### Exercici 3. {-}
+
+```{r eval=FALSE}
+install.packages("BiocManager") ##BiocManager ens serveix per instal·lar paquets de bioconductor
+install.packages("rmarkdown")
+install.packages("dplyr") 
+install.packages("ggplot2")
+## també podem instal·lar el paquet tidyverse mitjançant 'install.packages("tidyverse")'
+## install.packages("tidyverse") ## instal·lant aquest paquet, ja instal·lem 'dplyr', 'ggplot2' i altres paquets.
+BiocManager::install("GenomicRanges")
+BiocManager::install("Biostrings")
+```
+
+Fem servir `install.packages()` per a paquets que es troben al CRAN i `BiocManager::install()` per a paquets que es troben a Bioconductor.
+
+Noteu que a l'hora de fer servir la funció `BiocManager::install()`, no només utilitzem el nom de la funció `install()`, sinó que també indiquem el nom del paquet `BiocManager` i `::`. D'aquesta manera evitem carregar tot el paquet mitjançant `library(BiocManager)`, ja que aquesta funció l'hem de fer servir pocs cops.
+
+### Exercici 4. {-}
+
+Exercici lliure, ja que l'únic objectiu és veure com funcionen els operadors i les funcions explicades.
+
+#### a) 
+
+```{r}
+1+2+3+4 # suma
+1-5 # resta
+
+5*5 # multiplicació
+5/5 # divisó
+
+5**5 # potència
+
+10 %% 3 # mòdul
+10 %/% 3 # divisió entera
+```
+
+### Exercici 5. {-}
+
+Exercici lliure, ja que l'únic objectiu és veure com funcionen els operadors i les funcions explicades.
+
+```{r}
+# definim el vector amb la funció c().
+v <- c(1,2,3,4,5,6,7,8,9,10)
+```
+
+#### a) 
+
+```{r}
+v+v # suma
+v-v # resta
+v*v # multiplicació
+v/v # divisió
+```
+
+Veiem com cada operació es fa entre cada element del vector. 
+
+#### b)
+
+```{r}
+sum(v,v)
+sum(v)
+#...
+
+sqrt(v)
+```
+
+Amb algunes funcions com `sum()`, l'operació agafa tots els elements del vector, independentment de quantes vegades es repeteix el vector.
+
+Amb altres funcions com `sqrt()`, l'operació es fa a cada element del vector per separat.
+
+#### c) 
+
+```{r}
+mean(v)
+var(v)
+# ...
+```
+

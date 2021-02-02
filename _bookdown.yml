@@ -1,0 +1,8 @@
+book_filename: "asbtec_R"
+output_dir: "docs"
+delete_merged_file: yes
+before_chapter_script: "_common.R"
+language:
+  ui:
+    chapter_name: "Capítol "
+

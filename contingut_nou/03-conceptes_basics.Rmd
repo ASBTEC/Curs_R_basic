@@ -1,0 +1,53 @@
+# Com són les dades a R?
+
+## Tipus de dades a R
+
+Les dades a R solen ser classificades en 3 tipus:
+
+* Numèriques: enters (*integers*, *int*) i decimals (*dbl*)
+* Caràcters: lletres, paraules, frases... que es posen entre cometes (**_""_**)
+* Lògiques o booleanes: vertader (*TRUE*, *T*) o fals (*FALSE*, *F*)
+* Factors: poden ser qualsevol tipus (número, paraula...), però representa variables categòriques.
+
+Per visualitzar a quin tipus de dades és una variable, vector o qualsevol conjunt de dades en general, podem utilitzar les funcions `class()`, `typeof()`, `str()`...
+
+### Numèriques o *numeric*
+
+Les dades numèriques són aquelles dades que representen números. Es divideixen en:
+
+* *Double* o *dbl*: representen números decimals (*floating point*). Totes les dades numèriques d'R són *dbl* per defecte, encara que definim nombres enters.
+* *Integer* o *int*: representen números enters. Per indicar que volem que un número sigui considerat enter, hem de posar una `L` derrere (ex. `1L`). També podem utilitzar la funció `as.integer()` per a fer que un nombre tingui el format *integer*. 
+
+En la majoria dels casos la diferència entre *integer* i *double* no té massa importància.
+
+```{r}
+class(1)   # class() ens indicarà la classe de les dades (1), que en aquest cas és 'numeric' 
+class(as.integer(1))
+
+typeof(1)  # typeof() ens idicarà el tipus de dada que és el número 1, en aquest cas és 'double'
+typeof(1L) # com que hem indicat '1L' ara obtindrem que el tipus de dades és 'integer'.
+
+str(1)     # str ens retornarà el tipus de dades ('num') de 'numeric' i part d'aquestes dades.
+```
+
+### Caràcters o *character*
+
+Les dades de tipus *character* fan referència a tot tipus de text que es troba entre cometes (*quotes*) simples o dobles (*""* o *''*). Entre les cometes simples i dobles no hi ha diferència, però si, per exemple, dins de text entre cometes volem posar un apòstrof, les cometes que envoltin el text, hauràn de ser dobles, ja que sinó l'apòstrof faria "interferència" amb la cometa simple.
+
+### Lògiques, *logical* o *boolean*
+
+### Factors o *factor*
+
+## Estructures de dades
+
+### Bàsiques
+
+#### Vectors o *vectors*
+
+#### Matrius o *matrices*
+
+#### Marcs de dades o *data frames*
+
+#### Llistes o *lists*
+
+### Avançades
