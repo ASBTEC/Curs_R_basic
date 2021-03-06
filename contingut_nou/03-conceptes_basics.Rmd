@@ -9,7 +9,7 @@ Les dades a R solen ser classificades en 3 tipus:
 * Lògiques o booleanes: vertader (*TRUE*, *T*) o fals (*FALSE*, *F*)
 * Factors: poden ser qualsevol tipus (número, paraula...), però representa variables categòriques.
 
-Per visualitzar a quin tipus de dades és una variable, vector o qualsevol conjunt de dades en general, podem utilitzar les funcions `class()`, `typeof()`, `str()`...
+Per visualitzar a quin tipus de dades és una variable, vector o qualsevol conjunt de dades en general, podem utilitzar les funcions `class()`, `typeof()`, `str()`... Cadascuna d'aquestes funcions ens donarà informació sobre diferents nivells del tipus de dades (ex. `class()` ens retorna *numeric* i `typeof()` ens retornarà *dbl*/*int*)
 
 ### Numèriques o *numeric*
 
@@ -32,11 +32,34 @@ str(1)     # str ens retornarà el tipus de dades ('num') de 'numeric' i part d'
 
 ### Caràcters o *character*
 
-Les dades de tipus *character* fan referència a tot tipus de text que es troba entre cometes (*quotes*) simples o dobles (*""* o *''*). Entre les cometes simples i dobles no hi ha diferència, però si, per exemple, dins de text entre cometes volem posar un apòstrof, les cometes que envoltin el text, hauràn de ser dobles, ja que sinó l'apòstrof faria "interferència" amb la cometa simple.
+Les dades de classe *character* fan referència a tot tipus de text que es troba entre cometes (*quotes*) simples o dobles (*''* o *""*). Entre les cometes simples i dobles no hi ha diferència, però ambós extrems han de ser iguals i si, per exemple, dins de text entre cometes volem posar un apòstrof, les cometes que envoltin el text, hauràn de ser dobles, ja que sinó l'apòstrof faria "interferència" amb les cometes simples que indiquen el text en format *character*.
+
+```{r}
+class('Benvinguts a ASBTEC') # ens retorna character utilitzant cometes simples
+class("L'Associació de Biotecnòlegs de Catalunya") # aquí utilitzem cometes dobles i no afecta a l'apòstrof
+```
+
+També escriure números en format *character* o fins i tot convertir-los a *character* mitjançant funcions com `as.character()`, la qual tornarem a verue a vectors.
+
+```{r}
+class("1") # tot i que escrivim un número, com que està entre cometes ens retornarà "character"
+class(as.character(1)) # encara que escrivim un número sense cometes, la funció as.character() el converteix a character.
+```
 
 ### Lògiques, *logical* o *boolean*
 
 ### Factors o *factor*
+
+Les dades de classe *factor* són aquelles que representen variables categòriques i ser text, números o valors lògics.
+
+Per a declarar dades de tipus *factor*, podem utilitzar la funció `factor()`, la qual ens demana un vector `x` (que pot ser un sol número, text, etc) i també li podem donar altres atributs com `levels`.
+
+```{r}
+factors <- factor(x = 1:10) # genero un vector de factors a partir de la seqüència d'1 a 10.
+class(factors)
+factors # ens retorna un vector amb els números que li hem donat i també l'atribut levels.
+```
+
 
 ## Estructures de dades
 

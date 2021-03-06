@@ -2,6 +2,8 @@
 
 ## Capítol 1. Introduccio {-}
 
+En aquest capítol no hi ha exercicis, tret de la instal·lació i configuració d'R i RStudio.
+
 ## Capítol 2. Comencem {-}
 
 ### Exercici 1. {-}
@@ -88,7 +90,7 @@ Noteu que a l'hora de fer servir la funció `BiocManager::install()`, no només 
 
 Exercici lliure, ja que l'únic objectiu és veure com funcionen els operadors i les funcions explicades.
 
-#### a) 
+#### a) {-}
 
 ```{r}
 1+2+3+4 # suma
@@ -112,7 +114,7 @@ Exercici lliure, ja que l'únic objectiu és veure com funcionen els operadors i
 v <- c(1,2,3,4,5,6,7,8,9,10)
 ```
 
-#### a) 
+#### a) {-}
 
 ```{r}
 v+v # suma
@@ -123,7 +125,7 @@ v/v # divisió
 
 Veiem com cada operació es fa entre cada element del vector. 
 
-#### b)
+#### b) {-}
 
 ```{r}
 sum(v,v)
@@ -137,7 +139,7 @@ Amb algunes funcions com `sum()`, l'operació agafa tots els elements del vector
 
 Amb altres funcions com `sqrt()`, l'operació es fa a cada element del vector per separat.
 
-#### c) 
+#### c) {-}
 
 ```{r}
 mean(v)

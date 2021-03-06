@@ -336,7 +336,7 @@ Un exemple de codi que podem posar dins un *script* és el següent:
 ```{r eval=FALSE, echo=TRUE}
 # això és un comentari i no és executat.
 
-setwd("~") # amb aquesta funció, canvio el directori de treball al meu 'home'.
+setwd("~") # amb aquesta funció, canvio el directori de treball al meu 'home' (indicat amb ~).
 getwd() # amb aquesta funció puc saber quin és el meu directori de treball actual.
 
 # aquí podríem inserir més codi, carregar llibreries o definir funcions i variables
