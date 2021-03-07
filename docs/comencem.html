@@ -21,7 +21,6 @@
   
   <meta name="twitter:image" content="assets/portada.png" />
 
-<meta name="author" content="Associació de Biotecnòlegs de Catalunya" />
 
 
 
@@ -192,13 +191,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="divider"></li>
+<br>
 <li><ul>Edicions:
   <li><a href="https://www.asbtec.org" target="blank">1a edició [2021]</a></li>
 </ul></li><br>
 <li><ul>Autors:
   <li><a href="https://amitjavilaventura.github.io" target="blank">Adrià Mitjavila</a></li>
-</ul></li><br>
-<li><a href="https://bookdown.org" target="blank">Publicat amb <code>bookdown</code></a></li>
+</ul></li>
+<br>
+<br>
+<center>
+<a href="https://bookdown.org" target="blank">Publicat amb <code>bookdown</code></a>
+<br>
+<br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+</center>
 
 </ul>
 
@@ -243,7 +250,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>Funció</strong>: fragment de codi que tenim emmagatzemat dins un objecte dins la memòria d’R i que podem cridar repetidament, per exemple, la funció <code>sum()</code> que serveix per fer sumes dels nombres a l’interior del parèntesi. Algunes funcions tenen diversos paràmetres que podem canviar.</li>
 <li><strong>Paquets o llibreries</strong>: conjunt de funcions, mètodes i sets de dades. Poden estar integrats dins R o poden haver estat desenvolupats per tercers. En el segon cas, s’hauran d’instal·lar i carregar dins de la sessió actual.</li>
 <li><strong>Entorn (o ambient) de treball (<em>environment</em>)</strong>: entorn dins la memòria del sistema on es guarden totes les variables, paquets/llibreries, etc. Si volem utilitzar una funció, llibreria o variable, aquestes les hem de tenir definides dins l’entorn de treball. En cas contrari, R no les detectarà.</li>
-<li><em>Evaluar codi</em>: significa executar un fragment de codi, ja sigui una ordre o diverses. En cas de <em>scripts</em> sencers, se sol parlar més d’executar o, a vegades, córrer. També podem dir que cridem una funció.</li>
+<li><strong>Evaluar codi</strong>: significa executar un fragment de codi, ja sigui una ordre o diverses. En cas de <em>scripts</em> sencers, se sol parlar més d’executar o, a vegades, córrer. També podem dir que cridem una funció.</li>
 <li><strong>Comentari</strong>: text utilitzat per explicar el codi però que no és evaluat. A R (també Python i altres), aquest text està precedit per un coixinet (<strong><em>#</em></strong>).</li>
 </ul>
 <div style="page-break-after: always;"></div>
@@ -292,15 +299,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>També permet cridar una funció sense carregar el paquet sencer, de manera que ens estalviem temps d’execució i memòria dins d’R.</li>
 </ul>
 <p>A continuació, es mostra com instal·lar els paquets externs des de diversos repositoris.</p>
-<div id="cran" class="section level4" number="2.2.3.1">
-<h4><span class="header-section-number">2.2.3.1</span> CRAN</h4>
+<div id="cran" class="section level4 unnumbered">
+<h4>CRAN</h4>
 <p>Hi ha moltes funcions que es troben a paquets desenvolupats per tercers que s’han d’instal·lar mitjançant la funció <code>install.packages("paquet")</code> en cas que es trobin al <a href="https://cran.r-project.org/">CRAN</a>. També podem instal·lar més d’un paquet a la vegada si posem els noms dins un vector.</p>
 <p>Per exemple, els paquets <code>dplyr</code>, <code>ggplot2</code> o <code>tidyverse</code>, paquets molt útils que utilitzarem més endevant.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="comencem.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>) <span class="co"># instal·lem un paquet anomenat dplyr</span></span>
 <span id="cb3-2"><a href="comencem.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;tidyverse&quot;</span>)) <span class="co"># instal·lem diversos paquets mitjançant un vector.</span></span></code></pre></div>
 </div>
-<div id="bioconductor" class="section level4" number="2.2.3.2">
-<h4><span class="header-section-number">2.2.3.2</span> Bioconductor</h4>
+<div id="bioconductor" class="section level4 unnumbered">
+<h4>Bioconductor</h4>
 <p>Si treballem amb dades biològiques, és probable que la funció que desitgem utilitzar es trobi en un paquet dins del repositori <a href="https://bioconductor.org/"><strong>Bioconductor</strong></a>, un repositori de paquets dedicats al tractament de dades biològiques, sobretot genòmiques. Per a instal·lar paquets que es troben dins de Bioconductor, primer necessitarem instal·lar el paquet <code>BiocManager</code> i utilitzar la funció <code>install()</code> dins d’aquest paquet. Una de les funcions que podem instal·lar és <code>GenomicRanges</code>, un paquet molt útil per tractar amb coordenades genòmiques.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="comencem.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)       <span class="co"># instal·lem BiocManager</span></span>
 <span id="cb4-2"><a href="comencem.html#cb4-2" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;GenomicRanges&quot;</span>) <span class="co"># cridem la funció install() per a instal·lar un paquet de bioconductor</span></span></code></pre></div>
@@ -309,8 +316,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-2"><a href="comencem.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() <span class="do">## la funcio head() serveix per a mostrar la part inicial de les dades.</span></span>
 <span id="cb5-3"><a href="comencem.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;A3&quot;        &quot;a4&quot;        &quot;a4Base&quot;    &quot;a4Classif&quot; &quot;a4Core&quot;    &quot;a4Preproc&quot;</span></span></code></pre></div>
 </div>
-<div id="altres" class="section level4" number="2.2.3.3">
-<h4><span class="header-section-number">2.2.3.3</span> Altres</h4>
+<div id="altres" class="section level4 unnumbered">
+<h4>Altres</h4>
 <p>A vegades, hi ha paquets que no estan a cap dels dos repositoris anteriors, ja sigui perquè es troben en desenvolupament o perquè l’autor ha preferit carregar-lo a una altra plataforma com, per exemple <a href="https://github.com/">GitHub</a>, un repositori de codi, el qual ara no entrarem a explicar.</p>
 <p>De fet, hi ha moltíssims paquets interessants a GitHub. Alguns d’ells, com hem comentat, no es troben ni al CRAN ni a Bioconductor, mentre que d’altres sí que s’hi troben, però hi ha una versió en desenvolupament més nova que es troba a GitHub.</p>
 <p>Així doncs, per a instal·lar un paquet des de GitHub haurem de fer servir una altra funció (n’hi ha de diferents). Encara que normalment, en el mateix repositori de GitHub ja es sol indicar la manera d’instal·lar el paquet, una de les funcions més utilitzades és la funció <code>install_github</code> del paquet <code>devtools</code> o del paquet <code>remotes</code>.</p>
@@ -451,6 +458,73 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><code>trunc(x)</code>: ens tronca la part entera del nombre decimal <code>x</code> que li indiquem.</p></li>
 </ul>
 </div>
+<div id="comparacions-lògiques" class="section level4" number="2.2.4.1">
+<h4><span class="header-section-number">2.2.4.1</span> Comparacions lògiques</h4>
+<p>Utilitzant <strong>operadors lògics</strong> podem der comparacions entre dos conjunts de dades o objectes d’R. Si la comparació és certa ens l’evaluarà com a TRUE i si no ho és, ho farà com a FALSE.</p>
+<table>
+<colgroup>
+<col width="44%" />
+<col width="55%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Operador</th>
+<th align="center">Significat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><code>==</code></td>
+<td align="center">Igual que</td>
+</tr>
+<tr class="even">
+<td align="center"><code>!=</code></td>
+<td align="center">Diferent que</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>&gt;</code></td>
+<td align="center">Més gran que</td>
+</tr>
+<tr class="even">
+<td align="center"><code>&gt;=</code></td>
+<td align="center">Més gran o igual que</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>&lt;</code></td>
+<td align="center">Més petit que</td>
+</tr>
+<tr class="even">
+<td align="center"><code>&lt;=</code></td>
+<td align="center">Més petit o igual que</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>!x</code></td>
+<td align="center">Diferent de <em>x</em> on <em>x</em> és un vector, número, el resultat d’una funció, etc</td>
+</tr>
+<tr class="even">
+<td align="center"><code>x|y</code></td>
+<td align="center"><em>x</em> i <em>y</em> (o una o l’altra), on <em>x</em> i <em>y</em> són vectors, números, el resultat d’unes funcions, etc</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>x&amp;y</code></td>
+<td align="center"><em>x</em> i <em>y</em> (les dues coses alhora), on <em>x</em> i <em>y</em> són vectors, números, el resultat d’unes funcions, etc</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="comencem.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">==</span> <span class="dv">2</span> <span class="co"># 1 no és igual que 2, per tant ens torna FALSE</span></span>
+<span id="cb12-2"><a href="comencem.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span>
+<span id="cb12-3"><a href="comencem.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">!=</span> <span class="dv">2</span> <span class="co"># 1 no és igual que 2, per tant ens torna TRUE</span></span>
+<span id="cb12-4"><a href="comencem.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span>
+<span id="cb12-5"><a href="comencem.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">&gt;</span> <span class="dv">2</span>  <span class="co"># 1 no és més gran que 2, per tant ens torna FALSE</span></span>
+<span id="cb12-6"><a href="comencem.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span>
+<span id="cb12-7"><a href="comencem.html#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">&gt;=</span> <span class="dv">2</span> <span class="co"># 1 no és més gran o gual que 2, per tant ens torna FALSE</span></span>
+<span id="cb12-8"><a href="comencem.html#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span>
+<span id="cb12-9"><a href="comencem.html#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">&lt;</span> <span class="dv">2</span>  <span class="co"># 1 és més petit que 2, per tant ens torna TRUE</span></span>
+<span id="cb12-10"><a href="comencem.html#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span>
+<span id="cb12-11"><a href="comencem.html#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">&lt;=</span> <span class="dv">2</span> <span class="co"># 1 és més petit o igual que 2, per tant ens torna TRUE</span></span>
+<span id="cb12-12"><a href="comencem.html#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<p>Els operadors <code>!</code>, <code>|</code> i <code>&amp;</code> no tenen sentit si són utilitzats en solitari, però són molt útils quan utilitzem bucles condicionals <code>ìf()</code>, dels quals en parlarem més endevant.</p>
+</div>
 <div id="estadística-descriptiva" class="section level4 unnumbered">
 <h4>Estadística descriptiva</h4>
 <p>Una de les altres coses que podem fer és estadística descriptiva molt bàsica. Algunes funcions integrades a R:</p>
@@ -465,28 +539,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Resum general: <code>summary()</code></li>
 <li>…</li>
 </ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="comencem.html#cb12-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>) <span class="co">#definim el vector i el guardem a l&#39;objecte v</span></span>
-<span id="cb12-2"><a href="comencem.html#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="comencem.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(v)</span>
-<span id="cb12-4"><a href="comencem.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5.454545</span></span>
-<span id="cb12-5"><a href="comencem.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(v)</span>
-<span id="cb12-6"><a href="comencem.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5</span></span>
-<span id="cb12-7"><a href="comencem.html#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(v)</span>
-<span id="cb12-8"><a href="comencem.html#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2.876235</span></span>
-<span id="cb12-9"><a href="comencem.html#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(v)</span>
-<span id="cb12-10"><a href="comencem.html#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 8.272727</span></span>
-<span id="cb12-11"><a href="comencem.html#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(v)</span>
-<span id="cb12-12"><a href="comencem.html#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span>
-<span id="cb12-13"><a href="comencem.html#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(v)</span>
-<span id="cb12-14"><a href="comencem.html#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 10</span></span>
-<span id="cb12-15"><a href="comencem.html#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(v)</span>
-<span id="cb12-16"><a href="comencem.html#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   0%  25%  50%  75% 100% </span></span>
-<span id="cb12-17"><a href="comencem.html#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1.0  3.5  5.0  7.5 10.0</span></span>
-<span id="cb12-18"><a href="comencem.html#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(v)</span>
-<span id="cb12-19"><a href="comencem.html#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span></span>
-<span id="cb12-20"><a href="comencem.html#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   1.000   3.500   5.000   5.455   7.500  10.000</span></span>
-<span id="cb12-21"><a href="comencem.html#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-22"><a href="comencem.html#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co">#...</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="comencem.html#cb13-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>) <span class="co">#definim el vector i el guardem a l&#39;objecte v</span></span>
+<span id="cb13-2"><a href="comencem.html#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="comencem.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(v)</span>
+<span id="cb13-4"><a href="comencem.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5.454545</span></span>
+<span id="cb13-5"><a href="comencem.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(v)</span>
+<span id="cb13-6"><a href="comencem.html#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5</span></span>
+<span id="cb13-7"><a href="comencem.html#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(v)</span>
+<span id="cb13-8"><a href="comencem.html#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2.876235</span></span>
+<span id="cb13-9"><a href="comencem.html#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(v)</span>
+<span id="cb13-10"><a href="comencem.html#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 8.272727</span></span>
+<span id="cb13-11"><a href="comencem.html#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(v)</span>
+<span id="cb13-12"><a href="comencem.html#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span>
+<span id="cb13-13"><a href="comencem.html#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(v)</span>
+<span id="cb13-14"><a href="comencem.html#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 10</span></span>
+<span id="cb13-15"><a href="comencem.html#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(v)</span>
+<span id="cb13-16"><a href="comencem.html#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   0%  25%  50%  75% 100% </span></span>
+<span id="cb13-17"><a href="comencem.html#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1.0  3.5  5.0  7.5 10.0</span></span>
+<span id="cb13-18"><a href="comencem.html#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(v)</span>
+<span id="cb13-19"><a href="comencem.html#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span></span>
+<span id="cb13-20"><a href="comencem.html#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   1.000   3.500   5.000   5.455   7.500  10.000</span></span>
+<span id="cb13-21"><a href="comencem.html#cb13-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-22"><a href="comencem.html#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="co">#...</span></span></code></pre></div>
 </div>
 <div id="altres-funcions" class="section level4 unnumbered">
 <h4>Altres funcions</h4>
@@ -494,74 +568,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Informació general del sistema operatiu amb <code>Sys.info()</code>: nom, versió, …</li>
 </ul>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="comencem.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.info</span>()</span>
-<span id="cb13-2"><a href="comencem.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                             sysname </span></span>
-<span id="cb13-3"><a href="comencem.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                            &quot;Darwin&quot; </span></span>
-<span id="cb13-4"><a href="comencem.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                             release </span></span>
-<span id="cb13-5"><a href="comencem.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                            &quot;19.6.0&quot; </span></span>
-<span id="cb13-6"><a href="comencem.html#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                             version </span></span>
-<span id="cb13-7"><a href="comencem.html#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &quot;Darwin Kernel Version 19.6.0: Tue Nov 10 00:10:30 PST 2020; root:xnu-6153.141.10~1/RELEASE_X86_64&quot; </span></span>
-<span id="cb13-8"><a href="comencem.html#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                            nodename </span></span>
-<span id="cb13-9"><a href="comencem.html#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                             &quot;macbookamitjavi.local&quot; </span></span>
-<span id="cb13-10"><a href="comencem.html#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                             machine </span></span>
-<span id="cb13-11"><a href="comencem.html#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                            &quot;x86_64&quot; </span></span>
-<span id="cb13-12"><a href="comencem.html#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                               login </span></span>
-<span id="cb13-13"><a href="comencem.html#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                              &quot;root&quot; </span></span>
-<span id="cb13-14"><a href="comencem.html#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                                user </span></span>
-<span id="cb13-15"><a href="comencem.html#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                           &quot;ieo5089&quot; </span></span>
-<span id="cb13-16"><a href="comencem.html#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                      effective_user </span></span>
-<span id="cb13-17"><a href="comencem.html#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                           &quot;ieo5089&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="comencem.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.info</span>()</span>
+<span id="cb14-2"><a href="comencem.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                             sysname </span></span>
+<span id="cb14-3"><a href="comencem.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                            &quot;Darwin&quot; </span></span>
+<span id="cb14-4"><a href="comencem.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                             release </span></span>
+<span id="cb14-5"><a href="comencem.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                            &quot;19.6.0&quot; </span></span>
+<span id="cb14-6"><a href="comencem.html#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                             version </span></span>
+<span id="cb14-7"><a href="comencem.html#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &quot;Darwin Kernel Version 19.6.0: Tue Nov 10 00:10:30 PST 2020; root:xnu-6153.141.10~1/RELEASE_X86_64&quot; </span></span>
+<span id="cb14-8"><a href="comencem.html#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                            nodename </span></span>
+<span id="cb14-9"><a href="comencem.html#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                               &quot;macbookamitjavi.lan&quot; </span></span>
+<span id="cb14-10"><a href="comencem.html#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                             machine </span></span>
+<span id="cb14-11"><a href="comencem.html#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                            &quot;x86_64&quot; </span></span>
+<span id="cb14-12"><a href="comencem.html#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                               login </span></span>
+<span id="cb14-13"><a href="comencem.html#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                              &quot;root&quot; </span></span>
+<span id="cb14-14"><a href="comencem.html#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                                user </span></span>
+<span id="cb14-15"><a href="comencem.html#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                           &quot;ieo5089&quot; </span></span>
+<span id="cb14-16"><a href="comencem.html#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                      effective_user </span></span>
+<span id="cb14-17"><a href="comencem.html#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                                                           &quot;ieo5089&quot;</span></span></code></pre></div>
 <ul>
 <li>Informació de la sessió d’R amb <code>sessionInfo()</code>: versió, plataforma, paquets carregats… Això és útil a l’hora de buscar errors, ja que moltes vegades els errors depenen en l’entorn (<em>environment</em>) de treball.</li>
 </ul>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="comencem.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span>
-<span id="cb14-2"><a href="comencem.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; R version 4.0.3 (2020-10-10)</span></span>
-<span id="cb14-3"><a href="comencem.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Platform: x86_64-apple-darwin17.0 (64-bit)</span></span>
-<span id="cb14-4"><a href="comencem.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Running under: macOS Catalina 10.15.7</span></span>
-<span id="cb14-5"><a href="comencem.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb14-6"><a href="comencem.html#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Matrix products: default</span></span>
-<span id="cb14-7"><a href="comencem.html#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib</span></span>
-<span id="cb14-8"><a href="comencem.html#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib</span></span>
-<span id="cb14-9"><a href="comencem.html#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb14-10"><a href="comencem.html#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; locale:</span></span>
-<span id="cb14-11"><a href="comencem.html#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span></span>
-<span id="cb14-12"><a href="comencem.html#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb14-13"><a href="comencem.html#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; attached base packages:</span></span>
-<span id="cb14-14"><a href="comencem.html#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
-<span id="cb14-15"><a href="comencem.html#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb14-16"><a href="comencem.html#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; other attached packages:</span></span>
-<span id="cb14-17"><a href="comencem.html#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] scales_1.1.1    forcats_0.5.0   stringr_1.4.0   dplyr_1.0.3    </span></span>
-<span id="cb14-18"><a href="comencem.html#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [5] purrr_0.3.4     readr_1.4.0     tidyr_1.1.2     tibble_3.0.5   </span></span>
-<span id="cb14-19"><a href="comencem.html#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [9] ggplot2_3.3.3   tidyverse_1.3.0</span></span>
-<span id="cb14-20"><a href="comencem.html#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb14-21"><a href="comencem.html#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
-<span id="cb14-22"><a href="comencem.html#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] tidyselect_1.1.0    xfun_0.20           haven_2.3.1        </span></span>
-<span id="cb14-23"><a href="comencem.html#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [4] colorspace_2.0-0    vctrs_0.3.6         generics_0.1.0     </span></span>
-<span id="cb14-24"><a href="comencem.html#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [7] htmltools_0.5.1.1   yaml_2.2.1          rlang_0.4.10       </span></span>
-<span id="cb14-25"><a href="comencem.html#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [10] pillar_1.4.7        glue_1.4.2          withr_2.4.1        </span></span>
-<span id="cb14-26"><a href="comencem.html#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [13] DBI_1.1.1           dbplyr_2.0.0        modelr_0.1.8       </span></span>
-<span id="cb14-27"><a href="comencem.html#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [16] readxl_1.3.1        lifecycle_0.2.0     munsell_0.5.0      </span></span>
-<span id="cb14-28"><a href="comencem.html#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [19] gtable_0.3.0        cellranger_1.1.0    rvest_0.3.6        </span></span>
-<span id="cb14-29"><a href="comencem.html#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [22] codetools_0.2-18    evaluate_0.14       knitr_1.30         </span></span>
-<span id="cb14-30"><a href="comencem.html#cb14-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [25] fansi_0.4.2         highr_0.8           broom_0.7.3        </span></span>
-<span id="cb14-31"><a href="comencem.html#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [28] Rcpp_1.0.6          backports_1.2.1     BiocManager_1.30.10</span></span>
-<span id="cb14-32"><a href="comencem.html#cb14-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [31] jsonlite_1.7.2      fs_1.5.0            hms_1.0.0          </span></span>
-<span id="cb14-33"><a href="comencem.html#cb14-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [34] digest_0.6.27       stringi_1.5.3       bookdown_0.21      </span></span>
-<span id="cb14-34"><a href="comencem.html#cb14-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [37] grid_4.0.3          cli_2.2.0           tools_4.0.3        </span></span>
-<span id="cb14-35"><a href="comencem.html#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [40] magrittr_2.0.1      crayon_1.3.4        pkgconfig_2.0.3    </span></span>
-<span id="cb14-36"><a href="comencem.html#cb14-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [43] ellipsis_0.3.1      xml2_1.3.2          reprex_0.3.0       </span></span>
-<span id="cb14-37"><a href="comencem.html#cb14-37" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [46] lubridate_1.7.9.2   assertthat_0.2.1    rmarkdown_2.6      </span></span>
-<span id="cb14-38"><a href="comencem.html#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [49] httr_1.4.2          rstudioapi_0.13     R6_2.5.0           </span></span>
-<span id="cb14-39"><a href="comencem.html#cb14-39" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [52] compiler_4.0.3</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="comencem.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span>
+<span id="cb15-2"><a href="comencem.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; R version 4.0.3 (2020-10-10)</span></span>
+<span id="cb15-3"><a href="comencem.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Platform: x86_64-apple-darwin17.0 (64-bit)</span></span>
+<span id="cb15-4"><a href="comencem.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Running under: macOS Catalina 10.15.7</span></span>
+<span id="cb15-5"><a href="comencem.html#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb15-6"><a href="comencem.html#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Matrix products: default</span></span>
+<span id="cb15-7"><a href="comencem.html#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib</span></span>
+<span id="cb15-8"><a href="comencem.html#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib</span></span>
+<span id="cb15-9"><a href="comencem.html#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb15-10"><a href="comencem.html#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; locale:</span></span>
+<span id="cb15-11"><a href="comencem.html#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span></span>
+<span id="cb15-12"><a href="comencem.html#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb15-13"><a href="comencem.html#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; attached base packages:</span></span>
+<span id="cb15-14"><a href="comencem.html#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
+<span id="cb15-15"><a href="comencem.html#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb15-16"><a href="comencem.html#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; other attached packages:</span></span>
+<span id="cb15-17"><a href="comencem.html#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] scales_1.1.1    forcats_0.5.0   stringr_1.4.0   dplyr_1.0.3    </span></span>
+<span id="cb15-18"><a href="comencem.html#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [5] purrr_0.3.4     readr_1.4.0     tidyr_1.1.2     tibble_3.1.0   </span></span>
+<span id="cb15-19"><a href="comencem.html#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [9] ggplot2_3.3.3   tidyverse_1.3.0</span></span>
+<span id="cb15-20"><a href="comencem.html#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb15-21"><a href="comencem.html#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
+<span id="cb15-22"><a href="comencem.html#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] tidyselect_1.1.0  xfun_0.20         haven_2.3.1       colorspace_2.0-0 </span></span>
+<span id="cb15-23"><a href="comencem.html#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [5] vctrs_0.3.6       generics_0.1.0    htmltools_0.5.1.1 yaml_2.2.1       </span></span>
+<span id="cb15-24"><a href="comencem.html#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [9] utf8_1.1.4        rlang_0.4.10      pillar_1.5.0      glue_1.4.2       </span></span>
+<span id="cb15-25"><a href="comencem.html#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [13] withr_2.4.1       DBI_1.1.1         dbplyr_2.0.0      modelr_0.1.8     </span></span>
+<span id="cb15-26"><a href="comencem.html#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [17] readxl_1.3.1      lifecycle_1.0.0   munsell_0.5.0     gtable_0.3.0     </span></span>
+<span id="cb15-27"><a href="comencem.html#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [21] cellranger_1.1.0  rvest_0.3.6       codetools_0.2-18  evaluate_0.14    </span></span>
+<span id="cb15-28"><a href="comencem.html#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [25] knitr_1.30        fansi_0.4.2       broom_0.7.3       Rcpp_1.0.6       </span></span>
+<span id="cb15-29"><a href="comencem.html#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [29] backports_1.2.1   jsonlite_1.7.2    fs_1.5.0          hms_1.0.0        </span></span>
+<span id="cb15-30"><a href="comencem.html#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [33] digest_0.6.27     stringi_1.5.3     bookdown_0.21     grid_4.0.3       </span></span>
+<span id="cb15-31"><a href="comencem.html#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [37] cli_2.3.1         tools_4.0.3       magrittr_2.0.1    crayon_1.4.1     </span></span>
+<span id="cb15-32"><a href="comencem.html#cb15-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [41] pkgconfig_2.0.3   ellipsis_0.3.1    xml2_1.3.2        reprex_0.3.0     </span></span>
+<span id="cb15-33"><a href="comencem.html#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [45] lubridate_1.7.9.2 assertthat_0.2.1  rmarkdown_2.6     httr_1.4.2       </span></span>
+<span id="cb15-34"><a href="comencem.html#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [49] rstudioapi_0.13   R6_2.5.0          compiler_4.0.3</span></span></code></pre></div>
 <ul>
 <li>Data, hora, fus horari… amb <code>Sys.Date()</code>, <code>Sys.time()</code> i <code>Sys.timezone()</code></li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="comencem.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.Date</span>()      <span class="co"># data</span></span>
-<span id="cb15-2"><a href="comencem.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;2021-01-30&quot;</span></span>
-<span id="cb15-3"><a href="comencem.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()      <span class="co"># data i hora</span></span>
-<span id="cb15-4"><a href="comencem.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;2021-01-30 21:10:56 CET&quot;</span></span>
-<span id="cb15-5"><a href="comencem.html#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.timezone</span>()  <span class="co"># fus horari</span></span>
-<span id="cb15-6"><a href="comencem.html#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;Europe/Madrid&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="comencem.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.Date</span>()      <span class="co"># data</span></span>
+<span id="cb16-2"><a href="comencem.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;2021-03-07&quot;</span></span>
+<span id="cb16-3"><a href="comencem.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()      <span class="co"># data i hora</span></span>
+<span id="cb16-4"><a href="comencem.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;2021-03-07 00:21:59 CET&quot;</span></span>
+<span id="cb16-5"><a href="comencem.html#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.timezone</span>()  <span class="co"># fus horari</span></span>
+<span id="cb16-6"><a href="comencem.html#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;Europe/Rome&quot;</span></span></code></pre></div>
 </div>
 </div>
 <div id="establir-un-directori-de-treball" class="section level3" number="2.2.5">
@@ -587,13 +656,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Per a crear un <em>script</em> d’R, hem de clicar a la icona <i class="fa-file-medical"></i> de la part superior-esquerra de la pantalla i clicar a <em>R Script</em>. Un cop haguem fet això, ens apareixerà un nou fitxer (ex. <em>Untitled1</em>) en el qual podrem escriure tot el codi que volguem.</p>
 <p>A més, també podem insertar comentaris mitjançant el coixinet (<strong><em>#</em></strong>). Les línies d’un <em>script</em> que comencin amb aquest caràcter no seran evaluades i ens permetran inserir text que ens ajudi a entendre el que el codi està fent, sobretot si hem de compartir aquest codi.</p>
 <p>Un exemple de codi que podem posar dins un <em>script</em> és el següent:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="comencem.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># això és un comentari i no és executat.</span></span>
-<span id="cb17-2"><a href="comencem.html#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="comencem.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~&quot;</span>) <span class="co"># amb aquesta funció, canvio el directori de treball al meu &#39;home&#39; (indicat amb ~).</span></span>
-<span id="cb17-4"><a href="comencem.html#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() <span class="co"># amb aquesta funció puc saber quin és el meu directori de treball actual.</span></span>
-<span id="cb17-5"><a href="comencem.html#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-6"><a href="comencem.html#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co"># aquí podríem inserir més codi, carregar llibreries o definir funcions i variables</span></span>
-<span id="cb17-7"><a href="comencem.html#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># però això ho deixearem per a més endevant</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="comencem.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># això és un comentari i no és executat.</span></span>
+<span id="cb18-2"><a href="comencem.html#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="comencem.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~&quot;</span>) <span class="co"># amb aquesta funció, canvio el directori de treball al meu &#39;home&#39; (indicat amb ~).</span></span>
+<span id="cb18-4"><a href="comencem.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() <span class="co"># amb aquesta funció puc saber quin és el meu directori de treball actual.</span></span>
+<span id="cb18-5"><a href="comencem.html#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="comencem.html#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co"># aquí podríem inserir més codi, carregar llibreries o definir funcions i variables</span></span>
+<span id="cb18-7"><a href="comencem.html#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># però això ho deixearem per a més endevant</span></span></code></pre></div>
 </div>
 <div id="utilitzar-documents-rmarkdown" class="section level3" number="2.2.7">
 <h3><span class="header-section-number">2.2.7</span> Utilitzar documents Rmarkdown</h3>
@@ -601,11 +670,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Finalment, també es poden convertir (o <em>renderitzar</em>) els documents <code>Rmarkdown</code> a HTML, PDF, Word i altres, cosa que fa que aquest format sigui molt útil per a fer informes (o per aquest curs). A continuació veurem l’ús bàsic dels Rmarkdown.</p>
 <p><a href="https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">Aquí</a> teniu un petit resum (<em>Cheat sheet</em>) del funcionament d’<code>Rmarkdown</code>. A continuació us en fem una petita introducció.</p>
 <p>Per a crear un document Rmarkdown:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="comencem.html#cb18-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;assets/CrearRmarkdown.png&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-24"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
 <img src="assets/CrearRmarkdown.png" alt="Passos per crear un document Rmarkdown: 1) iniciar la creació del document; 2) posar títol al document i crear-lo; 3) Rmarkdown per defecte i algunes de les seves característiques." width="90%" />
 <p class="caption">
-Figure 2.1: Passos per crear un document Rmarkdown: 1) iniciar la creació del document; 2) posar títol al document i crear-lo; 3) Rmarkdown per defecte i algunes de les seves característiques.
+Figura2.1: Passos per crear un document Rmarkdown: 1) iniciar la creació del document; 2) posar títol al document i crear-lo; 3) Rmarkdown per defecte i algunes de les seves característiques.
 </p>
 </div>
 <ul>
@@ -645,20 +713,23 @@ Figure 2.1: Passos per crear un document Rmarkdown: 1) iniciar la creació del d
 <li><p><strong>Subíndex</strong>: els subíndex els hem d’escriure amb <code>~</code> (ex. <code>~subíndex~</code>–&gt; <sub>subíndex</sub>) a cada banda.</p></li>
 <li><p><strong>Superíndex</strong>: els superíndex els hem d’escriure amb <code>^</code> (ex. <code>^superíndex^</code>–&gt; <sup>superíndex</sup>) a cada banda.</p></li>
 <li><p><strong>Text ratllat</strong>: per a fer text ratllat, hem d’escriure <code>~~</code> a cada costat.</p></li>
-<li><p><strong>Text en format codi</strong>: el text amb font de codi (<em>Verbatim</em>) l’hem d’escriure amb un accent obert (`) a cada banda en cas que volguéssim escriure dins la mateixa línea de text o entre blocs de tres accents oberts (```) en cas que volguessim fer un bloc de codi.</p>
-<div class="figure">
-<img src="assets/bloc_de_text_codi.png" alt="" />
-<p class="caption">BlocCodi</p>
-</div></li>
-<li><p><strong>Codi en R</strong>: a Rmarkdown podem escriure codi en R dins de la mateixa línia com codi normal però amb una <strong>r</strong> derrere el primer ` o en un bloc a part, mitjançant els tres accents:</p>
-<div class="figure">
-<img src="assets/bloc_codi_R.png" alt="" />
-<p class="caption">BlocCodiR</p>
-</div></li>
+<li><p><strong>Text en format codi</strong>: el text amb font de codi (<em>Verbatim</em>) l’hem d’escriure amb un accent obert (<code>`</code>) a cada banda en cas que volguéssim escriure dins la mateixa línea de text o entre blocs de tres accents oberts (<code>```</code>) en cas que volguessim fer un bloc de codi.</p></li>
+</ul>
+<center>
+<img src="assets/bloc_de_text_codi.png" title="Bloc amb el text en font de codi" />
+</center>
+<ul>
+<li><strong>Codi en R</strong>: a Rmarkdown podem escriure codi en R dins de la mateixa línia com codi normal però amb una <strong>r</strong> derrere el primer accent o en un bloc a part, mitjançant els tres accents seguits d’una r entre claus.:</li>
+</ul>
+<center>
+<p><img src="assets/codi_R_inline.png" title="Codi en R dins el mateix text" /></p>
+<img src="assets/bloc_codi_R.png" title="Bloc de codi per executar codi en R" />
+</center>
+<ul>
 <li><p><strong>Hipervincles</strong>: per a inserir hipervincles hem d’escriure la paraula que farà de vincle entre claudàtors <code>[]</code> seguida de la ruta/<em>path</em> (URL o <em>path</em> al fitxer dins el sistema) entre parèntesis <code>()</code> (ex. <code>[ASBTEC](https://asbtec.org)</code> –&gt; <a href="https://asbtec.org">ASBTEC</a>).</p></li>
 <li><p><strong>Imatges</strong>: per a inserir imatges (JPEG, PNG…) hem de fer servir la mateixa sintàxi que amb els hipervincles, però amb un signe d’exclamació <code>!</code> a davant (<code>![text](ruta_de_la_imatge_dins_el_sistema_o_URL_de_la_imatge)</code>):</p>
-<p><code>![LogoAsbtec](https://asbtec.org/wp-content/uploads/2020/05/cropped-logo2.jpg)</code>
-<img src="https://asbtec.org/wp-content/uploads/2020/05/cropped-logo2.jpg" alt="LogoAsbtec" /></p>
+<p><code>![LogoAsbtec](https://asbtec.cat/wp-content/uploads/2020/05/cropped-logo2.jpg)</code>
+<img src="https://asbtec.cat/wp-content/uploads/2020/05/cropped-logo2.jpg" alt="LogoAsbtec" /></p>
 <p><em>Per a inserir imatges també podem fer-ho mitjançant algunes funcions d’R com <code>knitr::include_graphics()</code></em></p></li>
 <li><p><strong>Línies horitzontals (<em>hrules</em>)</strong>: Per a fer línies horitzontals hem de fer servir <code>---</code>, <code>***</code> o <code>___</code>. Per exemple:</p>
 <hr /></li>
@@ -755,8 +826,8 @@ Figure 2.1: Passos per crear un document Rmarkdown: 1) iniciar la creació del d
 <div id="exercici-1" class="section level3 unnumbered">
 <h3>Exercici 1</h3>
 <p><strong>a) Obre RStudio i crea un projecte anomenat <code>curs_R_asbtec</code> en un nou directori. D’aquesta manera podràs accedir fàcilment al curs cada vegada que obris RStudio.</strong></p>
-<p><strong>b) Crea un <em>script</em> d’R o un document <em>Rmd</em> i guarda’l com a <code>curs_asbtec.R</code> (probablement sigui més útil un <em>Rmd</em>). D’aquesta manera podràs guardar els apunts/exercicis que facis en el curs (pots fer-ne un de sol per a tot el curs o diversos per a cada capítol, i separar apunts i exercicis o fer-ho tot junt).</strong></p>
-<p><strong>c) Insereix un comentari (en el cas de l’<em>script</em>) o un títol (en el cas del document <em>Rmd</em>) amb <code>#</code> indicant el títol del curs, i els subtítols conseqüents (<code>##</code>…) indicant els títols dels capítols, etc.</strong></p>
+<p><strong>b) Crea un un document <em>RMarkdown</em> i guarda’l com a <code>curs_asbtec.Rmd</code>. D’aquesta manera podràs guardar els apunts/exercicis que facis en el curs (pots fer-ne un de sol per a tot el curs o diversos per a cada capítol, i separar apunts i exercicis o fer-ho tot junt).</strong></p>
+<p><strong>c) Insereix un títol (en el cas del document <em>Rmd</em>) amb <code>#</code> indicant el títol del curs, i els subtítols conseqüents (<code>##</code>…) indicant els títols dels capítols, etc.</strong></p>
 <p style="font-size:10px">
 <strong>Nota de l’exerici 1: els següents exercicis els pots fer dins el document creat en aquest exercici 1</strong>
 </p>
@@ -804,7 +875,13 @@ Figure 2.1: Passos per crear un document Rmarkdown: 1) iniciar la creació del d
 <li>RStudio. <strong>Rmarkdown cheat sheet</strong>. Online <a href="https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">aquí</a>.</li>
 <li>Yihui Xie, J. J. Allaire, Garrett Grolemund <strong>R Markdown: The Definitive Guide</strong>. Online <a href="https://bookdown.org/yihui/rmarkdown/">aquí</a>.</li>
 <li>Randall Pruim. <strong>Mathematics in R Markdown</strong>. Online <a href="https://rpruim.github.io/s341/S19/from-class/MathinRmd.html">aquí</a></li>
+<li>Robert I. Kabacoff. <strong>Data Management. Operators</strong>. <em>Quick-R by DataCamp</em>. Online <a href="https://www.statmethods.net/management/operators.html">aquí</a></li>
 </ol>
+<p>Això és una línea de codi en R que s’executa
+dins el text i no en un bloc separat: 2.
+En renderitzar el document Rmd, apareixerà
+un 2 (o el resultat del codi que posem) i no
+el codi.</p>
 
 </div>
 </div>

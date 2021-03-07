@@ -18,21 +18,9 @@ Seguir les instruccions del capítol. Es pot fer un _script_ o un document _RMar
 
 #### c) {-}
 
-L'ideal seria l'estructura següent:
-
-* *Script*: 
-
-  ```
-  # Cursos ASBTEC - Inicia't a R
+L'ideal seria l'estructura següent (o similar):
   
-  ## Capítol 1.
-  
-  ## Capítol 2.
-  
-  ### ...
-  ```
-  
-* *RMarkdown*: en el cas d'*RMarkdown* tenim l'avantatge de la capçalera *YAML* que ens permet posar títol, autor, data... en el document que volem crear, per tant, el títol del curs no és necessari posar-lo en un comentari. Així doncs l'estructura ideal seria la següent (encara que podeu crear la que vosaltres volgueu):
+* *RMarkdown*: en d'*RMarkdown* tenim l'avantatge de la capçalera *YAML* que ens permet posar títol, autor, data... en el document que volem crear, per tant, el títol del curs no és necessari posar-lo en un comentari. Així doncs l'estructura ideal seria la següent (encara que podeu crear la que vosaltres volgueu):
 
   ```
   ---
@@ -56,6 +44,9 @@ L'ideal seria l'estructura següent:
   
   ...
   ```
+  
+* També podriem fer quelcom similar amb un *Script*.
+
 
 ### Exercici 2. {-}
 

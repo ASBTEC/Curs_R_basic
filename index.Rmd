@@ -1,6 +1,5 @@
 --- 
 title: "Cursos ASBTEC | Inicia't a R"
-author: "Associació de Biotecnòlegs de Catalunya"
 cover-image: "assets/portada.png"
 site: bookdown::bookdown_site
 output:
@@ -26,7 +25,7 @@ Acutalment, el curs *Inicia't a R* de l'Associació de Biotecnòlegs de Cataluny
 
 # Llicència {-}
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Aquest treball està protegit sota la llicència <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>, per la qual es pot compartir el material per a usos no comercials i amb les condicions d'atribució a l'autor i de no modificació.
 
 # Pròleg {-}
 

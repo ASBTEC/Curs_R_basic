@@ -1,7 +1,7 @@
 fig:unnamed-chunk-4
 fig:unnamed-chunk-5
 fig:unnamed-chunk-6
-fig:unnamed-chunk-24
+fig:unnamed-chunk-25
 introducció
 què-és-r
 per-què-r
@@ -18,17 +18,11 @@ comencem-a-fer-servir-r-i-rstudio
 configurem-rstudio
 com-cridar-funcions
 paquets-externs
-cran
-bioconductor
-altres
 us-bàsic-dr
+comparacions-lògiques
 establir-un-directori-de-treball
 utilitzar-scripts-dr
 utilitzar-documents-rmarkdown
 crear-un-projecte-dr
 exercicis.
 recursos-per-a-laprenentatge-1
-a-1
-a-2
-b-1
-c-1

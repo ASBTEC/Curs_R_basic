@@ -22,7 +22,7 @@ Abans de començar a utilitzar R i RStudio, s'han de conèixer alguns conceptes 
 * **Funció**: fragment de codi que tenim emmagatzemat dins un objecte dins la memòria d'R i que podem cridar repetidament, per exemple, la funció `sum()` que serveix per fer sumes dels nombres a l'interior del parèntesi. Algunes funcions tenen diversos paràmetres que podem canviar.
 * **Paquets o llibreries**: conjunt de funcions, mètodes i sets de dades. Poden estar integrats dins R o poden haver estat desenvolupats per tercers. En el segon cas, s'hauran d'instal·lar i carregar dins de la sessió actual.
 * **Entorn (o ambient) de treball (_environment_)**: entorn dins la memòria del sistema on es guarden totes les variables, paquets/llibreries, etc. Si volem utilitzar una funció, llibreria o variable, aquestes les hem de tenir definides dins l'entorn de treball. En cas contrari, R no les detectarà.
-* *Evaluar codi*: significa executar un fragment de codi, ja sigui una ordre o diverses. En cas de *scripts* sencers, se sol parlar més d'executar o, a vegades, córrer. També podem dir que cridem una funció.
+* **Evaluar codi**: significa executar un fragment de codi, ja sigui una ordre o diverses. En cas de *scripts* sencers, se sol parlar més d'executar o, a vegades, córrer. També podem dir que cridem una funció.
 * **Comentari**: text utilitzat per explicar el codi però que no és evaluat. A R (també Python i altres), aquest text està precedit per un coixinet (**_#_**).
 
 \newpage
@@ -81,7 +81,7 @@ paquet2::funcio() # cridem la funcio() del paquet2 indicant el nom del paquet
 
 A continuació, es mostra com instal·lar els paquets externs des de diversos repositoris.
 
-#### CRAN
+#### CRAN {-}
 
 Hi ha moltes funcions que es troben a paquets desenvolupats per tercers que s'han d'instal·lar mitjançant la funció `install.packages("paquet")` en cas que es trobin al [CRAN](https://cran.r-project.org/). També podem instal·lar més d'un paquet a la vegada si posem els noms dins un vector. 
 
@@ -92,7 +92,7 @@ install.packages("dplyr") # instal·lem un paquet anomenat dplyr
 install.packages(c("ggplot2", "tidyverse")) # instal·lem diversos paquets mitjançant un vector.
 ```
 
-#### Bioconductor
+#### Bioconductor {-}
 
 Si treballem amb dades biològiques, és probable que la funció que desitgem utilitzar es trobi en un paquet dins del repositori [**Bioconductor**](https://bioconductor.org/), un repositori de paquets dedicats al tractament de dades biològiques, sobretot genòmiques. Per a instal·lar paquets que es troben dins de Bioconductor, primer necessitarem instal·lar el paquet `BiocManager` i utilitzar la funció `install()` dins d'aquest paquet. Una de les funcions que podem instal·lar és `GenomicRanges`, un paquet molt útil per tractar amb coordenades genòmiques.
 
@@ -108,7 +108,7 @@ BiocManager::available() %>% ## l'operador %>% és una 'pipe' del paquet 'dplyr'
   head() ## la funcio head() serveix per a mostrar la part inicial de les dades.
 ```
 
-#### Altres
+#### Altres {-}
 
 A vegades, hi ha paquets que no estan a cap dels dos repositoris anteriors, ja sigui perquè es troben en desenvolupament o perquè l'autor ha preferit carregar-lo a una altra plataforma com, per exemple [GitHub](https://github.com/), un repositori de codi, el qual ara no entrarem a explicar.
 
@@ -250,7 +250,36 @@ Hi ha altres funcions que ens poden ajudar en molts sentits, encara que no són 
 * `ceiling(x)`: ens retorna el primer nombre enter més gran que el nombre decimal `x` que li indiquem.
 
 * `trunc(x)`: ens tronca la part entera del nombre decimal `x` que li indiquem.
- 
+
+#### Comparacions lògiques
+
+Utilitzant  **operadors  lògics** podem der comparacions entre dos conjunts de dades o objectes d'R. Si la comparació és certa ens l'evaluarà com a TRUE i si no ho és, ho farà com a FALSE.
+
+| Operador   | Significat    |
+| :------:   | :--------:    |
+| `==`       | Igual que      |
+| `!=`       | Diferent que     |
+| `>`        | Més gran que      |
+| `>=`       | Més gran o igual que      |
+| `<`        | Més petit que      |
+| `<=`       | Més petit o igual que         |
+| `!x`       | Diferent de *x* on *x* és un vector, número, el resultat d'una funció, etc |
+| `x|y`      | *x* i *y* (o una o l'altra), on *x* i *y* són vectors, números, el resultat d'unes funcions, etc |
+| `x&y`      | *x* i *y* (les dues coses alhora), on *x* i *y* són vectors, números, el resultat d'unes funcions, etc |
+
+
+
+```{r}
+1 == 2 # 1 no és igual que 2, per tant ens torna FALSE
+1 != 2 # 1 no és igual que 2, per tant ens torna TRUE
+1 > 2  # 1 no és més gran que 2, per tant ens torna FALSE
+1 >= 2 # 1 no és més gran o gual que 2, per tant ens torna FALSE
+1 < 2  # 1 és més petit que 2, per tant ens torna TRUE
+1 <= 2 # 1 és més petit o igual que 2, per tant ens torna TRUE
+```
+
+Els operadors `!`, `|` i `&` no tenen sentit si són utilitzats en solitari, però són molt útils quan utilitzem bucles condicionals `ìf()`, dels quals en parlarem més endevant.
+
 #### Estadística descriptiva {-}
 
 Una de les altres coses que podem fer és estadística descriptiva molt bàsica. Algunes funcions integrades a R:
@@ -353,7 +382,7 @@ Finalment, també es poden convertir (o *renderitzar*) els documents `Rmarkdown`
  
 Per a crear un document Rmarkdown:
 
-```{r fig.cap="Passos per crear un document Rmarkdown: 1) iniciar la creació del document; 2) posar títol al document i crear-lo; 3) Rmarkdown per defecte i algunes de les seves característiques."}
+```{r fig.cap="Passos per crear un document Rmarkdown: 1) iniciar la creació del document; 2) posar títol al document i crear-lo; 3) Rmarkdown per defecte i algunes de les seves característiques.", echo=FALSE}
 knitr::include_graphics("assets/CrearRmarkdown.png")
 ```
 
@@ -404,20 +433,26 @@ Comencem amb la sintaxi de `markdown`. A continuació teniu algunes instruccions
 * **Superíndex**: els superíndex els hem d'escriure amb `^` (ex. `^superíndex^`--> ^superíndex^) a cada banda.
 * **Text ratllat**: per a fer text ratllat, hem d'escriure `~~` a cada costat.
 
-* **Text en format codi**: el text amb font de codi (*Verbatim*) l'hem d'escriure amb un accent obert (\`) a cada banda en cas que volguéssim escriure dins la mateixa línea de text o entre  blocs de tres accents oberts (\`\`\`) en cas que volguessim fer un bloc de codi.
+* **Text en format codi**: el text amb font de codi (*Verbatim*) l'hem d'escriure amb un accent obert (`` ` ``) a cada banda en cas que volguéssim escriure dins la mateixa línea de text o entre  blocs de tres accents oberts (`` ``` ``) en cas que volguessim fer un bloc de codi.
 
-  ![BlocCodi](assets/bloc_de_text_codi.png)
+<center>
+  ![](assets/bloc_de_text_codi.png "Bloc amb el text en font de codi")
+</center>
 
-* **Codi en R**: a Rmarkdown podem escriure codi en R dins de la mateixa línia com codi normal però amb una **r** derrere el primer \` o en un bloc a part, mitjançant els tres accents:
+* **Codi en R**: a Rmarkdown podem escriure codi en R dins de la mateixa línia com codi normal però amb una **r** derrere el primer accent o en un bloc a part, mitjançant els tres accents seguits d'una r entre claus.:
 
-  ![BlocCodiR](assets/bloc_codi_R.png)
+<center>
+  ![](assets/codi_R_inline.png "Codi en R dins el mateix text")
+
+  ![](assets/bloc_codi_R.png "Bloc de codi per executar codi en R")
+</center>
 
 * **Hipervincles**: per a inserir hipervincles hem d'escriure la paraula que farà de vincle entre claudàtors `[]` seguida de la ruta/*path* (URL o *path* al fitxer dins el sistema) entre parèntesis `()` (ex. `[ASBTEC](https://asbtec.org)` --> [ASBTEC](https://asbtec.org)).
 
 * **Imatges**: per a inserir imatges (JPEG, PNG...) hem de fer servir la mateixa sintàxi que amb els hipervincles, però amb un signe d'exclamació `!` a davant (`![text](ruta_de_la_imatge_dins_el_sistema_o_URL_de_la_imatge)`):
 
-  `![LogoAsbtec](https://asbtec.org/wp-content/uploads/2020/05/cropped-logo2.jpg)`
-  ![LogoAsbtec](https://asbtec.org/wp-content/uploads/2020/05/cropped-logo2.jpg)
+  `![LogoAsbtec](https://asbtec.cat/wp-content/uploads/2020/05/cropped-logo2.jpg)`
+  ![LogoAsbtec](https://asbtec.cat/wp-content/uploads/2020/05/cropped-logo2.jpg)
   
   *Per a inserir imatges també podem fer-ho mitjançant algunes funcions d'R com `knitr::include_graphics()`*
 
@@ -508,9 +543,9 @@ Sempre que creeu un nou projecte o l'obriu mitjançant el fitxer `nom_projecte.R
 
 **a) Obre RStudio i crea un projecte anomenat `curs_R_asbtec` en un nou directori. D'aquesta manera podràs accedir fàcilment al curs cada vegada que obris RStudio.**
 
-**b) Crea un _script_ d'R o un document _Rmd_ i guarda'l com a `curs_asbtec.R` (probablement sigui més útil un _Rmd_). D'aquesta manera podràs guardar els apunts/exercicis que facis en el curs (pots fer-ne un de sol per a tot el curs o diversos per a cada capítol, i separar apunts i exercicis o fer-ho tot junt).**
+**b) Crea un un document _RMarkdown_ i guarda'l com a `curs_asbtec.Rmd`. D'aquesta manera podràs guardar els apunts/exercicis que facis en el curs (pots fer-ne un de sol per a tot el curs o diversos per a cada capítol, i separar apunts i exercicis o fer-ho tot junt).**
 
-**c) Insereix un comentari (en el cas de l'_script_) o un títol (en el cas del document _Rmd_) amb `#` indicant el títol del curs, i els subtítols conseqüents (`##`...) indicant els títols dels capítols, etc.**
+**c) Insereix un títol (en el cas del document _Rmd_) amb `#` indicant el títol del curs, i els subtítols conseqüents (`##`...) indicant els títols dels capítols, etc.**
 
 <p style="font-size:10px"> **Nota de l'exerici 1: els següents exercicis els pots fer dins el document creat en aquest exercici 1**</p>
 
@@ -553,3 +588,12 @@ Sempre que creeu un nou projecte o l'obriu mitjançant el fitxer `nom_projecte.R
 2. RStudio. **Rmarkdown cheat sheet**. Online [aquí](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf).
 3. Yihui Xie, J. J. Allaire, Garrett Grolemund **R Markdown: The Definitive Guide**. Online [aquí](https://bookdown.org/yihui/rmarkdown/).
 4. Randall Pruim. **Mathematics in R Markdown**. Online [aquí](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html)
+5. Robert I. Kabacoff. **Data Management. Operators**. *Quick-R by DataCamp*. Online [aquí](https://www.statmethods.net/management/operators.html)
+
+
+
+Això és una línea de codi en R que s'executa 
+dins el text i no en un bloc separat: `r 1+1`.
+En renderitzar el document Rmd, apareixerà 
+un 2 (o el resultat del codi que posem) i no 
+el codi.

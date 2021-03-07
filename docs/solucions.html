@@ -21,7 +21,6 @@
   
   <meta name="twitter:image" content="assets/portada.png" />
 
-<meta name="author" content="Associació de Biotecnòlegs de Catalunya" />
 
 
 
@@ -192,13 +191,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="divider"></li>
+<br>
 <li><ul>Edicions:
   <li><a href="https://www.asbtec.org" target="blank">1a edició [2021]</a></li>
 </ul></li><br>
 <li><ul>Autors:
   <li><a href="https://amitjavilaventura.github.io" target="blank">Adrià Mitjavila</a></li>
-</ul></li><br>
-<li><a href="https://bookdown.org" target="blank">Publicat amb <code>bookdown</code></a></li>
+</ul></li>
+<br>
+<br>
+<center>
+<a href="https://bookdown.org" target="blank">Publicat amb <code>bookdown</code></a>
+<br>
+<br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+</center>
 
 </ul>
 
@@ -221,6 +228,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Solucions</h1>
 <div id="capítol-1.-introduccio" class="section level2 unnumbered">
 <h2>Capítol 1. Introduccio</h2>
+<p>En aquest capítol no hi ha exercicis, tret de la instal·lació i configuració d’R i RStudio.</p>
 </div>
 <div id="capítol-2.-comencem" class="section level2 unnumbered">
 <h2>Capítol 2. Comencem</h2>
@@ -236,17 +244,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="c" class="section level4 unnumbered">
 <h4>c)</h4>
-<p>L’ideal seria l’estructura següent:</p>
+<p>L’ideal seria l’estructura següent (o similar):</p>
 <ul>
-<li><p><em>Script</em>:</p>
-<pre><code># Cursos ASBTEC - Inicia&#39;t a R
-
-## Capítol 1.
-
-## Capítol 2.
-
-### ...</code></pre></li>
-<li><p><em>RMarkdown</em>: en el cas d’<em>RMarkdown</em> tenim l’avantatge de la capçalera <em>YAML</em> que ens permet posar títol, autor, data… en el document que volem crear, per tant, el títol del curs no és necessari posar-lo en un comentari. Així doncs l’estructura ideal seria la següent (encara que podeu crear la que vosaltres volgueu):</p>
+<li><p><em>RMarkdown</em>: en d’<em>RMarkdown</em> tenim l’avantatge de la capçalera <em>YAML</em> que ens permet posar títol, autor, data… en el document que volem crear, per tant, el títol del curs no és necessari posar-lo en un comentari. Així doncs l’estructura ideal seria la següent (encara que podeu crear la que vosaltres volgueu):</p>
 <pre><code>---
 title: &quot;Cursos ASBTEC - Inicia&#39;t a R 
 author: &quot;opcional&quot;
@@ -267,95 +267,96 @@ Apunts...
 ### Exercici 1.
 
 ...</code></pre></li>
+<li><p>També podriem fer quelcom similar amb un <em>Script</em>.</p></li>
 </ul>
 </div>
 </div>
 <div id="exercici-2." class="section level3 unnumbered">
 <h3>Exercici 2.</h3>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="solucions.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Definim la variable &#39;hola&#39;. El text ha d&#39;anar entre cometes!</span></span>
-<span id="cb26-2"><a href="solucions.html#cb26-2" aria-hidden="true" tabindex="-1"></a>hola <span class="ot">&lt;-</span> <span class="st">&#39;Hola, món!&#39;</span></span>
-<span id="cb26-3"><a href="solucions.html#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-4"><a href="solucions.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Imprimim la variable</span></span>
-<span id="cb26-5"><a href="solucions.html#cb26-5" aria-hidden="true" tabindex="-1"></a>hola <span class="co"># escrivint-la.</span></span>
-<span id="cb26-6"><a href="solucions.html#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;Hola, món!&quot;</span></span>
-<span id="cb26-7"><a href="solucions.html#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(hola) <span class="co"># utilitzant la funció print</span></span>
-<span id="cb26-8"><a href="solucions.html#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;Hola, món!&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="solucions.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Definim la variable &#39;hola&#39;. El text ha d&#39;anar entre cometes!</span></span>
+<span id="cb25-2"><a href="solucions.html#cb25-2" aria-hidden="true" tabindex="-1"></a>hola <span class="ot">&lt;-</span> <span class="st">&#39;Hola, món!&#39;</span></span>
+<span id="cb25-3"><a href="solucions.html#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="solucions.html#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Imprimim la variable</span></span>
+<span id="cb25-5"><a href="solucions.html#cb25-5" aria-hidden="true" tabindex="-1"></a>hola <span class="co"># escrivint-la.</span></span>
+<span id="cb25-6"><a href="solucions.html#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;Hola, món!&quot;</span></span>
+<span id="cb25-7"><a href="solucions.html#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(hola) <span class="co"># utilitzant la funció print</span></span>
+<span id="cb25-8"><a href="solucions.html#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;Hola, món!&quot;</span></span></code></pre></div>
 </div>
 <div id="exercici-3." class="section level3 unnumbered">
 <h3>Exercici 3.</h3>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="solucions.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>) <span class="do">##BiocManager ens serveix per instal·lar paquets de bioconductor</span></span>
-<span id="cb27-2"><a href="solucions.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span>
-<span id="cb27-3"><a href="solucions.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>) </span>
-<span id="cb27-4"><a href="solucions.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
-<span id="cb27-5"><a href="solucions.html#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="do">## també podem instal·lar el paquet tidyverse mitjançant &#39;install.packages(&quot;tidyverse&quot;)&#39;</span></span>
-<span id="cb27-6"><a href="solucions.html#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="do">## install.packages(&quot;tidyverse&quot;) ## instal·lant aquest paquet, ja instal·lem &#39;dplyr&#39;, &#39;ggplot2&#39; i altres paquets.</span></span>
-<span id="cb27-7"><a href="solucions.html#cb27-7" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;GenomicRanges&quot;</span>)</span>
-<span id="cb27-8"><a href="solucions.html#cb27-8" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;Biostrings&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="solucions.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>) <span class="do">##BiocManager ens serveix per instal·lar paquets de bioconductor</span></span>
+<span id="cb26-2"><a href="solucions.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span>
+<span id="cb26-3"><a href="solucions.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>) </span>
+<span id="cb26-4"><a href="solucions.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb26-5"><a href="solucions.html#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="do">## també podem instal·lar el paquet tidyverse mitjançant &#39;install.packages(&quot;tidyverse&quot;)&#39;</span></span>
+<span id="cb26-6"><a href="solucions.html#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="do">## install.packages(&quot;tidyverse&quot;) ## instal·lant aquest paquet, ja instal·lem &#39;dplyr&#39;, &#39;ggplot2&#39; i altres paquets.</span></span>
+<span id="cb26-7"><a href="solucions.html#cb26-7" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;GenomicRanges&quot;</span>)</span>
+<span id="cb26-8"><a href="solucions.html#cb26-8" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;Biostrings&quot;</span>)</span></code></pre></div>
 <p>Fem servir <code>install.packages()</code> per a paquets que es troben al CRAN i <code>BiocManager::install()</code> per a paquets que es troben a Bioconductor.</p>
 <p>Noteu que a l’hora de fer servir la funció <code>BiocManager::install()</code>, no només utilitzem el nom de la funció <code>install()</code>, sinó que també indiquem el nom del paquet <code>BiocManager</code> i <code>::</code>. D’aquesta manera evitem carregar tot el paquet mitjançant <code>library(BiocManager)</code>, ja que aquesta funció l’hem de fer servir pocs cops.</p>
 </div>
 <div id="exercici-4." class="section level3 unnumbered">
 <h3>Exercici 4.</h3>
 <p>Exercici lliure, ja que l’únic objectiu és veure com funcionen els operadors i les funcions explicades.</p>
-<div id="a-1" class="section level4" number="2.4.0.1">
-<h4><span class="header-section-number">2.4.0.1</span> a)</h4>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="solucions.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">2</span><span class="sc">+</span><span class="dv">3</span><span class="sc">+</span><span class="dv">4</span> <span class="co"># suma</span></span>
-<span id="cb28-2"><a href="solucions.html#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 10</span></span>
-<span id="cb28-3"><a href="solucions.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1-5</span> <span class="co"># resta</span></span>
-<span id="cb28-4"><a href="solucions.html#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] -4</span></span>
-<span id="cb28-5"><a href="solucions.html#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-6"><a href="solucions.html#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span><span class="sc">*</span><span class="dv">5</span> <span class="co"># multiplicació</span></span>
-<span id="cb28-7"><a href="solucions.html#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 25</span></span>
-<span id="cb28-8"><a href="solucions.html#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span><span class="sc">/</span><span class="dv">5</span> <span class="co"># divisó</span></span>
-<span id="cb28-9"><a href="solucions.html#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span>
-<span id="cb28-10"><a href="solucions.html#cb28-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-11"><a href="solucions.html#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span><span class="sc">**</span><span class="dv">5</span> <span class="co"># potència</span></span>
-<span id="cb28-12"><a href="solucions.html#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 3125</span></span>
-<span id="cb28-13"><a href="solucions.html#cb28-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-14"><a href="solucions.html#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">%%</span> <span class="dv">3</span> <span class="co"># mòdul</span></span>
-<span id="cb28-15"><a href="solucions.html#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span>
-<span id="cb28-16"><a href="solucions.html#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">%/%</span> <span class="dv">3</span> <span class="co"># divisió entera</span></span>
-<span id="cb28-17"><a href="solucions.html#cb28-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 3</span></span></code></pre></div>
+<div id="a-1" class="section level4 unnumbered">
+<h4>a)</h4>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="solucions.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">2</span><span class="sc">+</span><span class="dv">3</span><span class="sc">+</span><span class="dv">4</span> <span class="co"># suma</span></span>
+<span id="cb27-2"><a href="solucions.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 10</span></span>
+<span id="cb27-3"><a href="solucions.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1-5</span> <span class="co"># resta</span></span>
+<span id="cb27-4"><a href="solucions.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] -4</span></span>
+<span id="cb27-5"><a href="solucions.html#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="solucions.html#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span><span class="sc">*</span><span class="dv">5</span> <span class="co"># multiplicació</span></span>
+<span id="cb27-7"><a href="solucions.html#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 25</span></span>
+<span id="cb27-8"><a href="solucions.html#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span><span class="sc">/</span><span class="dv">5</span> <span class="co"># divisó</span></span>
+<span id="cb27-9"><a href="solucions.html#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span>
+<span id="cb27-10"><a href="solucions.html#cb27-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-11"><a href="solucions.html#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span><span class="sc">**</span><span class="dv">5</span> <span class="co"># potència</span></span>
+<span id="cb27-12"><a href="solucions.html#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 3125</span></span>
+<span id="cb27-13"><a href="solucions.html#cb27-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-14"><a href="solucions.html#cb27-14" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">%%</span> <span class="dv">3</span> <span class="co"># mòdul</span></span>
+<span id="cb27-15"><a href="solucions.html#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span>
+<span id="cb27-16"><a href="solucions.html#cb27-16" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">%/%</span> <span class="dv">3</span> <span class="co"># divisió entera</span></span>
+<span id="cb27-17"><a href="solucions.html#cb27-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 3</span></span></code></pre></div>
 </div>
 </div>
 <div id="exercici-5." class="section level3 unnumbered">
 <h3>Exercici 5.</h3>
 <p>Exercici lliure, ja que l’únic objectiu és veure com funcionen els operadors i les funcions explicades.</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="solucions.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># definim el vector amb la funció c().</span></span>
-<span id="cb29-2"><a href="solucions.html#cb29-2" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>)</span></code></pre></div>
-<div id="a-2" class="section level4" number="2.4.0.2">
-<h4><span class="header-section-number">2.4.0.2</span> a)</h4>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="solucions.html#cb30-1" aria-hidden="true" tabindex="-1"></a>v<span class="sc">+</span>v <span class="co"># suma</span></span>
-<span id="cb30-2"><a href="solucions.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]  2  4  6  8 10 12 14 16 18 20</span></span>
-<span id="cb30-3"><a href="solucions.html#cb30-3" aria-hidden="true" tabindex="-1"></a>v<span class="sc">-</span>v <span class="co"># resta</span></span>
-<span id="cb30-4"><a href="solucions.html#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] 0 0 0 0 0 0 0 0 0 0</span></span>
-<span id="cb30-5"><a href="solucions.html#cb30-5" aria-hidden="true" tabindex="-1"></a>v<span class="sc">*</span>v <span class="co"># multiplicació</span></span>
-<span id="cb30-6"><a href="solucions.html#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]   1   4   9  16  25  36  49  64  81 100</span></span>
-<span id="cb30-7"><a href="solucions.html#cb30-7" aria-hidden="true" tabindex="-1"></a>v<span class="sc">/</span>v <span class="co"># divisió</span></span>
-<span id="cb30-8"><a href="solucions.html#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] 1 1 1 1 1 1 1 1 1 1</span></span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="solucions.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># definim el vector amb la funció c().</span></span>
+<span id="cb28-2"><a href="solucions.html#cb28-2" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>)</span></code></pre></div>
+<div id="a-2" class="section level4 unnumbered">
+<h4>a)</h4>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="solucions.html#cb29-1" aria-hidden="true" tabindex="-1"></a>v<span class="sc">+</span>v <span class="co"># suma</span></span>
+<span id="cb29-2"><a href="solucions.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]  2  4  6  8 10 12 14 16 18 20</span></span>
+<span id="cb29-3"><a href="solucions.html#cb29-3" aria-hidden="true" tabindex="-1"></a>v<span class="sc">-</span>v <span class="co"># resta</span></span>
+<span id="cb29-4"><a href="solucions.html#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] 0 0 0 0 0 0 0 0 0 0</span></span>
+<span id="cb29-5"><a href="solucions.html#cb29-5" aria-hidden="true" tabindex="-1"></a>v<span class="sc">*</span>v <span class="co"># multiplicació</span></span>
+<span id="cb29-6"><a href="solucions.html#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]   1   4   9  16  25  36  49  64  81 100</span></span>
+<span id="cb29-7"><a href="solucions.html#cb29-7" aria-hidden="true" tabindex="-1"></a>v<span class="sc">/</span>v <span class="co"># divisió</span></span>
+<span id="cb29-8"><a href="solucions.html#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] 1 1 1 1 1 1 1 1 1 1</span></span></code></pre></div>
 <p>Veiem com cada operació es fa entre cada element del vector.</p>
 </div>
-<div id="b-1" class="section level4" number="2.4.0.3">
-<h4><span class="header-section-number">2.4.0.3</span> b)</h4>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="solucions.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(v,v)</span>
-<span id="cb31-2"><a href="solucions.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 110</span></span>
-<span id="cb31-3"><a href="solucions.html#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(v)</span>
-<span id="cb31-4"><a href="solucions.html#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 55</span></span>
-<span id="cb31-5"><a href="solucions.html#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co">#...</span></span>
-<span id="cb31-6"><a href="solucions.html#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-7"><a href="solucions.html#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(v)</span>
-<span id="cb31-8"><a href="solucions.html#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] 1.000000 1.414214 1.732051 2.000000 2.236068 2.449490 2.645751 2.828427</span></span>
-<span id="cb31-9"><a href="solucions.html#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [9] 3.000000 3.162278</span></span></code></pre></div>
+<div id="b-1" class="section level4 unnumbered">
+<h4>b)</h4>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="solucions.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(v,v)</span>
+<span id="cb30-2"><a href="solucions.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 110</span></span>
+<span id="cb30-3"><a href="solucions.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(v)</span>
+<span id="cb30-4"><a href="solucions.html#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 55</span></span>
+<span id="cb30-5"><a href="solucions.html#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co">#...</span></span>
+<span id="cb30-6"><a href="solucions.html#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="solucions.html#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(v)</span>
+<span id="cb30-8"><a href="solucions.html#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] 1.000000 1.414214 1.732051 2.000000 2.236068 2.449490 2.645751 2.828427</span></span>
+<span id="cb30-9"><a href="solucions.html#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [9] 3.000000 3.162278</span></span></code></pre></div>
 <p>Amb algunes funcions com <code>sum()</code>, l’operació agafa tots els elements del vector, independentment de quantes vegades es repeteix el vector.</p>
 <p>Amb altres funcions com <code>sqrt()</code>, l’operació es fa a cada element del vector per separat.</p>
 </div>
-<div id="c-1" class="section level4" number="2.4.0.4">
-<h4><span class="header-section-number">2.4.0.4</span> c)</h4>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="solucions.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(v)</span>
-<span id="cb32-2"><a href="solucions.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5.5</span></span>
-<span id="cb32-3"><a href="solucions.html#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(v)</span>
-<span id="cb32-4"><a href="solucions.html#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 9.166667</span></span>
-<span id="cb32-5"><a href="solucions.html#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span></code></pre></div>
+<div id="c-1" class="section level4 unnumbered">
+<h4>c)</h4>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="solucions.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(v)</span>
+<span id="cb31-2"><a href="solucions.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5.5</span></span>
+<span id="cb31-3"><a href="solucions.html#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(v)</span>
+<span id="cb31-4"><a href="solucions.html#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 9.166667</span></span>
+<span id="cb31-5"><a href="solucions.html#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span></code></pre></div>
 
 </div>
 </div>

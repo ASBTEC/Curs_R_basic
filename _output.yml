@@ -6,13 +6,21 @@ bookdown::gitbook:
       before: |
         <li><a href="./">Cursos ASBTEC | Inicia't a R</a></li>
       after: |
+        <br>
         <li><ul>Edicions:
           <li><a href="https://www.asbtec.org" target="blank">1a edició [2021]</a></li>
         </ul></li><br>
         <li><ul>Autors:
           <li><a href="https://amitjavilaventura.github.io" target="blank">Adrià Mitjavila</a></li>
-        </ul></li><br>
-        <li><a href="https://bookdown.org" target="blank">Publicat amb <code>bookdown</code></a></li>
+        </ul></li>
+        <br>
+        <br>
+        <center>
+        <a href="https://bookdown.org" target="blank">Publicat amb <code>bookdown</code></a>
+        <br>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+        </center>
     toolbar:
       position: fixed
     edit : null
